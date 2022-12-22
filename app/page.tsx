@@ -15,8 +15,8 @@ export default function Home() {
         </div>
         <BiDownArrowAlt className='animate-bounce h-14 w-14 self-center mt-auto'/>
       </section>
-      <section className='py-10'>
-        <div className='flex flex-row bg-slate-200 h-screen/2 px-14 py-16 justify-between'>
+      <section className='py-10 h-screen/2'>
+        <div className='flex flex-row bg-slate-300  px-14 py-16 justify-between'>
           <div className='m-4 items-start w-1/4 px-5'>
             <ul className='roboto-mono'>
               <li className='py-2 flex flex-row border-b border-b-black/60'>
@@ -68,6 +68,12 @@ export default function Home() {
             </button>
           </div>
         </div>
+      </section>
+      <section className='py-10 h-screen-3/4 flex flex-col items-center'>
+        <h1>Technologies</h1>
+      </section>
+      <section className='h-screen bg-neutral-300'>
+
       </section>
     </main>
   )
