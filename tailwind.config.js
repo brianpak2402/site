@@ -37,15 +37,15 @@ module.exports = {
         'notion-text-red': '#e03e3e',
       },
       animation: {
-        fadeOut: 'fadeOut 1s ease-in-out',
+        fadeOut: 'fadeOut 2s ease-in-out',
         fadeIn: 'fadeIn 1s ease-in-out',
       }, 
-      transitionDelay: {
-        '3000': '3000ms',
-      },
       keyframes: {
         fadeOut: {
           '0%': {
+            opacity: 1,
+          },
+          '70%': {
             opacity: 1,
           },
           '100%': {

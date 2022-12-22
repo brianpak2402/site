@@ -9,11 +9,13 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <section className='flex flex-col h-screen w-screen justify-center'>
-        <div className='flex flex-col items-end box-border mr-40 mt-auto' >
+        <div className='flex flex-col items-end box-border mr-40 ' >
           <h1>Hello, I am Brian Pak!</h1>
           <p>Student Software Developer and [something]</p>
         </div>
-        <BiDownArrowAlt className='animate-bounce h-14 w-14 self-center mt-auto'/>
+        {/* <button className='self-center mt-auto'>
+          <BiDownArrowAlt className='animate-bounce h-14 w-14'/>
+        </button> */}
       </section>
       <section className='py-10 h-screen/2'>
         <div className='flex flex-row bg-slate-300  px-14 py-16 justify-between'>
@@ -37,12 +39,12 @@ export default function Home() {
             </ul>
             <div className='flex flex-row justify-evenly pt-4'>
               <button className='w-10 h-10 hover:rounded-full'>
-                <Link href='https://www.linkedin.com/in/brianpakk/' className='flex justify-center'>
+                <Link href='https://www.linkedin.com/in/brianpakk/' className='flex justify-center transition ease-in-out hover:-translate-y-1 hover:scale-110'>
                   <FaLinkedinIn className='h-full w-2/3'/>
                 </Link>
               </button>
               <button className='w-10 h-10 hover:rounded-full'>
-                <Link href='https://github.com/brianpak2402' className='flex justify-center'>
+                <Link href='https://github.com/brianpak2402' className='flex justify-center transition ease-in-out hover:-translate-y-1 hover:scale-110'>
                   <FaGithub  className='h-full w-2/3'/>
                 </Link>
               </button>
@@ -69,10 +71,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='py-10 h-screen-3/4 flex flex-col items-center'>
-        <h1>Technologies</h1>
+      <section id='technologies' className='py-10 h-screen-3/4 flex flex-col items-center'>
+        <h1>My Technologies</h1>
       </section>
-      <section className='h-screen bg-neutral-300'>
+      <section className='h-screen bg-slate-300'>
 
       </section>
     </main>
