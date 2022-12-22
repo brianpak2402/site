@@ -5,7 +5,6 @@
 @layer base {
     h1 {
         @apply text-4xl;
-        @apply inter-var;
         @apply font-medium;
     }
     h2 {
@@ -19,7 +18,11 @@
     }
     p {
         @apply text-black/60;
-        @apply font-medium;
+        @apply font-semibold;
+    }
+    strong {
+        @apply text-black;
+        @apply font-bold
     }
 }
 
@@ -36,6 +39,10 @@ html {
     font-family: inter-var, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.proxima-nova {
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 /*  possibly use for p 
 .lora {
     font-family: Lora, serif;
@@ -45,7 +52,3 @@ html {
 .roboto-mono {
     font-family: 'Roboto Mono', sans-serif;
 }  */
-
-.proxima-nova {
-    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
