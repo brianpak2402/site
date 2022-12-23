@@ -37,31 +37,20 @@ module.exports = {
         'notion-text-red': '#e03e3e',
       },
       animation: {
-        fadeOut: 'fadeOut 2s ease-in-out',
+        fadeOutLoader: 'fadeOutLoader 2s ease-in-out',
         fadeIn: 'fadeIn 1s ease-in-out',
       }, 
       keyframes: {
-        fadeOut: {
-          '0%': {
-            opacity: 1,
-          },
-          '70%': {
-            opacity: 1,
-          },
-          '100%': {
-            opacity:0,
-          },
+        fadeOutLoader: {
+          '0%': { opacity: 1 },
+          '70%': { opacity: 1 },
+          '100%': { opacity:0 },
         },
         fadeIn: {
-          '0%': {
-            opacity: 0,
-          },
-          '100%': {
-            opacity:1,
-          },
-
-        }
-      }
+          '0%': { opacity: 0 },
+          '100%': { opacity:1 },
+        },
+      },
     },
   },
   plugins: [],

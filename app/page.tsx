@@ -1,6 +1,8 @@
 import styles from './page.module.css'
 import Link from 'next/link';
 
+import HorizontalCarousel from './HorizontalCarousel';
+
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BiDownArrowAlt } from 'react-icons/bi';
 
@@ -9,15 +11,15 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <section className='flex flex-col h-screen w-screen justify-center'>
-        <div className='flex flex-col items-end box-border mr-40 ' >
-          <h1>Hello, I am Brian Pak!</h1>
+        <div className='flex flex-col items-end box-border mr-40 mt-auto' >
+          <h1 className='transition-transform'>Hello, I am Brian Pak!</h1>
           <p>Student Software Developer and [something]</p>
         </div>
-        {/* <button className='self-center mt-auto'>
+        <button className='self-center mt-auto'>
           <BiDownArrowAlt className='animate-bounce h-14 w-14'/>
-        </button> */}
+        </button>
       </section>
-      <section className='py-10 h-screen/2'>
+      <section className='py-10 h-screen/2 '>
         <div className='flex flex-row bg-slate-300  px-14 py-16 justify-between'>
           <div className='m-4 items-start w-1/4 px-5'>
             <ul className='roboto-mono'>
@@ -65,15 +67,13 @@ export default function Home() {
               incididunt ut labore et dolore magna aliqua. Lectus quam id leo in vitae turpis massa sed. 
               Pretium lectus quam id leo. At quis risus sed vulputate odio ut enim blandit volutpat.
             </p>
-            <button className='bg-notion-legacy-red rounded-full text-white hover:opacity-80 transition-opacity px-4 py-2 inter-var font-medium'>
+            <button className='bg-notion-legacy-red rounded-full text-white hover:opacity-90 transition-opacity duration-500 px-4 py-2 inter-var font-medium'>
               Click for Resume 
             </button>
           </div>
         </div>
       </section>
-      <section id='technologies' className='py-10 h-screen-3/4 flex flex-col items-center'>
-        <h1>My Technologies</h1>
-      </section>
+      <HorizontalCarousel/>
       <section className='h-screen bg-slate-300'>
 
       </section>
