@@ -22,7 +22,7 @@
     }
     strong {
         @apply text-black;
-        @apply font-bold
+        @apply font-bold;
     }
 }
 
