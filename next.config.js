@@ -7,6 +7,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  exportPathMap: function() {
+    return {
+      "/locales/de-DE/summer-dress-f": {
+        page: "/locales/[locale]/[slug]",
+        query: { locale: "de-DE", slug: "summer-dress-f" }
+      }
+    };
+  },
   experimental: {
     appDir: true,
   },
