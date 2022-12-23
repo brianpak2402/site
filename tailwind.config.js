@@ -39,18 +39,25 @@ module.exports = {
       animation: {
         fadeOutLoader: 'fadeOutLoader 2s ease-in-out',
         fadeIn: 'fadeIn 1s ease-in-out',
+        scrollHorizontal: 'scrollHorizontal 180s linear infinite'
       }, 
       keyframes: {
         fadeOutLoader: {
-          '0%': { opacity: 1 },
-          '70%': { opacity: 1 },
+          '0%, 70%': { opacity: 1 },
           '100%': { opacity:0 },
         },
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity:1 },
         },
+        scrollHorizontal: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-3400px)' }
+        }
       },
+      width: {
+        'scroll': '6000px'
+      }
     },
   },
   plugins: [],

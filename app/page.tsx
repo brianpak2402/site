@@ -41,12 +41,12 @@ export default function Home() {
             </ul>
             <div className='flex flex-row justify-evenly pt-4'>
               <button className='w-10 h-10 hover:rounded-full'>
-                <Link href='https://www.linkedin.com/in/brianpakk/' className='flex justify-center transition ease-in-out hover:-translate-y-1 hover:scale-110'>
+                <Link href='https://www.linkedin.com/in/brianpakk/' className='flex justify-center transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
                   <FaLinkedinIn className='h-full w-2/3'/>
                 </Link>
               </button>
               <button className='w-10 h-10 hover:rounded-full'>
-                <Link href='https://github.com/brianpak2402' className='flex justify-center transition ease-in-out hover:-translate-y-1 hover:scale-110'>
+                <Link href='https://github.com/brianpak2402' className='flex justify-center transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
                   <FaGithub  className='h-full w-2/3'/>
                 </Link>
               </button>
@@ -73,7 +73,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <HorizontalCarousel/>
+      <section className='bg-white h-screen/2 flex flex-col items-center'>
+        <h1 className='mt-5'>My Technologies</h1>
+        <p className='my-5 mx-60 text-center'>
+          Here are all the technologies I use! aliqua. Lectus quam id leo in vitae turpis massa sed. Pretium lectus quam id leo. 
+          At quis risus sed vulputate odio ut enim blandit volutpat.
+        </p>
+        <HorizontalCarousel />
+      </section>
       <section className='h-screen bg-slate-300'>
 
       </section>
