@@ -33,8 +33,8 @@ const imagesToRender:StaticImageData[] = images.concat(images).concat(images).co
 
 export default function HorizontalCarousel() {
   return (
-    <div className='w-4/5 h-fit overflow-hidden'>
-      <ul className='w-scroll flex flex-nowrap items-center self-center overflow-hidden my-3 ml-0 animate-scrollHorizontal'>
+    <div className='h-fit overflow-hidden'>
+      <ul className='w-screen flex flex-nowrap items-center self-center ml-0 animate-scrollHorizontal'>
         {imagesToRender.map((image, i) => 
           <li 
             key={i} 

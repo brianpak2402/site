@@ -52,7 +52,7 @@ module.exports = {
         },
         scrollHorizontal: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-3400px)' }
+          '100%': { transform: 'translateX(-3000px)' }
         }
       },
       width: {

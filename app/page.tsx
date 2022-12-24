@@ -2,13 +2,17 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import HorizontalCarousel from './HorizontalCarousel';
 
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BiDownArrowAlt } from 'react-icons/bi';
 
+
 // eventually replace title with my image.
 export default function Home() {
+  const techSection = useRef<null | HTMLElement>(null);
+
   return (
     <main className="flex flex-col">
       <section className='flex flex-col h-screen w-screen justify-center'>
@@ -23,13 +27,16 @@ export default function Home() {
             animate={{ opacity: [0,1], y:[200,0] }}
             transition={{ type: "tween", duration: 1.20, ease: "easeInOut"}}
           >
-            Student Software Developer and [something]
+            Student Software Developer and [something] 
           </motion.p>
         </div>
-        <motion.button 
+        <motion.button
           className='self-center mt-auto animate-bounce flex flex-col items-center'
           animate={{ opacity: [0, 1]}}
           transition={{ type: "tween", duration: 0.5, delay: 1.5}}
+          onClick={() => {
+            techSection!.current!.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           <h4>Discover More!</h4>
           <BiDownArrowAlt className='h-14 w-14'/>
@@ -100,7 +107,7 @@ export default function Home() {
                 transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
               >
-                <Link href='https://github.com/brianpak2402' className='flex justify-center transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 animate-fadeInRight'>
+                <Link href='https://github.com/brianpak2402' className='flex justify-center transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
                   <FaGithub  className='h-full w-2/3'/>
                 </Link>
               </motion.button>
@@ -142,7 +149,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='bg-white h-screen/2 flex flex-col items-center'>
+      <section className='bg-white h-screen/2 flex flex-col items-center' ref={techSection}>
         <motion.h1 
           className='mt-5'
           whileInView={{ opacity: [0, 1], y: [200, 0] }}
@@ -167,9 +174,6 @@ export default function Home() {
         >
           <HorizontalCarousel />
         </motion.div>
-      </section>
-      <section className='h-screen bg-slate-300'>
-
       </section>
     </main>
   )

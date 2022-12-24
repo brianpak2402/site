@@ -27,6 +27,9 @@
     button {
         @apply font-medium
     }
+    html {
+        @apply scroll-smooth
+    }
 }
 
 h1, h2, h3, h4, p, html, button {
