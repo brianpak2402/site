@@ -1,6 +1,6 @@
 import '../styles/globals.css'
-
 import Navbar from './Navbar'
+
 import Preloader from './Preloader'
 
 export default function RootLayout({
@@ -19,7 +19,6 @@ export default function RootLayout({
       </head>
 
       <body>
-        {/* <Navbar/> */}
         <Preloader/>
         {children}
       </body>

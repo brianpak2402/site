@@ -36,11 +36,8 @@ export default function HorizontalCarousel() {
     <div className='h-fit overflow-hidden'>
       <ul className='w-screen flex flex-nowrap items-center self-center ml-0 animate-scrollHorizontal'>
         {imagesToRender.map((image, i) => 
-          <li 
-            key={i} 
-            className='flex justify-center items-center flex-shrink-0 my-2 px-3 transition duration-300 ease-in-out hover:-translate-y-2'
-          >
-            <Image src={image} alt='tech-images' width={i%images.length < 8 ? 80 : 60} className='w-full h-full transition duration-500 grayscale hover:grayscale-0'/>
+          <li key={i} className='flex justify-center items-center flex-shrink-0 my-2 px-3 transition duration-300 ease-in-out hover:-translate-y-2'>
+            <Image src={image} alt='tech-logo' width={i%images.length < 8 ? 80 : 60} className='w-full h-full transition duration-500 grayscale hover:grayscale-0'/>
           </li>
         )}
       </ul>

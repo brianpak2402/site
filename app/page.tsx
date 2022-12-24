@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import HorizontalCarousel from './HorizontalCarousel';
+import Navbar from './Navbar';
 
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BiDownArrowAlt } from 'react-icons/bi';
@@ -27,7 +28,7 @@ export default function Home() {
             animate={{ opacity: [0,1], y:[200,0] }}
             transition={{ type: "tween", duration: 1.20, ease: "easeInOut"}}
           >
-            Student Software Developer and [something] 
+            Student Full-Stack Developer 
           </motion.p>
         </div>
         <motion.button
@@ -113,35 +114,42 @@ export default function Home() {
               </motion.button>
             </div>
           </div>
-          <div className='mt-8 mr-8 w-3/4'>
+          <div className='mt-4 mr-8 w-3/4'>
             <motion.p 
               className='mb-3'
               whileInView={{ opacity:[0,1], y: [200,0]}}
-              transition={{ type: "tween", duration:1, ease: "easeOut" }}
+              transition={{ type: "tween", duration:1.05, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              I am an undergraduate student at the Georgia Institute of Technology pursuing a major in Computer Science 
-              with a concentration in Intelligence & Media. 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Lectus quam id leo in vitae turpis massa sed. 
-              Pretium lectus quam id leo. At quis risus sed vulputate odio ut enim blandit volutpat. Leo integer 
-              malesuada nunc vel risus. Magna sit amet purus gravida quis blandit turpis. Magna ac placerat vestibulum lectus mauris ultrices. 
-              Vulputate sapien nec sagittis aliquam. Mauris a diam maecenas sed enim ut sem.
+              Hi there! My name is Brian Pak, and I enjoy building full-stack web applications for all sorts of user 
+              experiences. During the summer of 2021, I transitioned from studying cello performance to 
+              computer science in pursuit of exploring new perspectives on the way we consume/produce music. However,
+              however, I uncovered many wonderful subfields of computing that I could not stop myself from ignoring.
             </motion.p>
             <motion.p 
-              className='mb-3'
+              className=''
               whileInView={{ opacity:[0,1], y: [200,0]}}
-              transition={{ type: "tween", duration:1, ease: "easeOut" }}
+              transition={{ type: "tween", duration:1.1, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Lectus quam id leo in vitae turpis massa sed. 
-              Pretium lectus quam id leo. At quis risus sed vulputate odio ut enim blandit volutpat.
+              Currently, I am pursuing a degree in Computer Science at the Georgia Institute of Technology. 
+              When I am not inside the classroom, I am improving my understanding 
+              of web-technologies by building projects.
+            </motion.p>
+            <motion.p 
+              className='mt-3'
+              whileInView={{ opacity:[0,1], y: [200,0]}}
+              transition={{ type: "tween", duration:1.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Right now, I am working with the GT WebDev club to build Spotify Jukebox: a full-stack, serverless application 
+              that hosts virtual music sessions where the crowd can take control of the aux. 
+              {/* Don't know what I mean? Come check us out! */}
             </motion.p>
             <motion.button 
-              className='bg-notion-legacy-red rounded-full text-white transition duration-300 ease-in-out hover:-translate-y-1 px-4 py-2'
+              className='bg-notion-legacy-red rounded-full text-white px-4 py-2 my-5'
               whileInView={{ opacity:[0, 0.7, 1], y: [200, 10, 0] }}
-              transition={{ type: "tween", duration:1 }}
+              transition={{ type: "tween", duration:1.2, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               Click for Resume 
@@ -164,8 +172,7 @@ export default function Home() {
           transition={{ type: "tween", duration:1, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Here are all the technologies I use! aliqua. Lectus quam id leo in vitae turpis massa sed. Pretium lectus quam id leo. 
-          At quis risus sed vulputate odio ut enim blandit volutpat.
+          Below are all the technologies that I have worked with in the past.
         </motion.p>
         <motion.div 
           whileInView={{ opacity: [0, 1], y: [200, 0] }}
