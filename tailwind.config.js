@@ -39,10 +39,6 @@ module.exports = {
       animation: {
         fadeOutLoader: 'fadeOutLoader 1.5s ease-in-out',
         fadeIn: 'fadeIn 3s ease-in-out',
-        fadeInUp: 'fadeInUp 1.75s ease-in-out',
-        fadeInDown: 'fadeInDown 1.75s ease-in-out',
-        fadeInLeft: 'fadeInLeft 1.75s ease-in-out',
-        fadeInRight: 'fadeInRight 1.75s ease-in-out',
         scrollHorizontal: 'scrollHorizontal 180s linear infinite'
       }, 
       keyframes: {
@@ -53,46 +49,6 @@ module.exports = {
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity:1 },
-        },
-        fadeInUp: {
-          '0%' : {
-            opacity: 0,
-            transform: 'translateY(200px)'
-          }, 
-          '100%': {
-            opacity: 1,
-            transform: 'none',
-          }
-        },
-        fadeInDown: {
-          '0%' : {
-            opacity: 0,
-            transform: 'translateY(-200px)'
-          }, 
-          '100%': {
-            opacity: 1,
-            transform: 'none',
-          }
-        },
-        fadeInLeft: {
-          '0%' : {
-            opacity: 0,
-            transform: 'translateX(200px)'
-          }, 
-          '100%': {
-            opacity: 1,
-            transform: 'none',
-          }
-        },
-        fadeInRight: {
-          '0%' : {
-            opacity: 0,
-            transform: 'translateX(-200px)'
-          }, 
-          '100%': {
-            opacity: 1,
-            transform: 'none',
-          }
         },
         scrollHorizontal: {
           '0%': { transform: 'translateX(0)' },

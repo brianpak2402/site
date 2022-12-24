@@ -12,6 +12,7 @@ import SpotifyAPILogo from '../public/images/spotify-api-logo.png';
 import TypeScriptLogo from '../public/images/typescript-logo.png';
 import ChakraUILogo from '../public/images/chakra-ui-logo.png';
 import WebSocketsLogo from '../public/images/websocket-logo.png';
+import FramerMotionLogo from '../public/images/framer-motion-logo.png';
 
 const images:StaticImageData[] = [
   SSTLogo,
@@ -25,6 +26,7 @@ const images:StaticImageData[] = [
   ReactLogo,
   JavaScriptLogo,
   TypeScriptLogo,
+  FramerMotionLogo,
 ]
 
 const imagesToRender:StaticImageData[] = images.concat(images).concat(images).concat(images);
@@ -34,7 +36,10 @@ export default function HorizontalCarousel() {
     <div className='w-4/5 h-fit overflow-hidden'>
       <ul className='w-scroll flex flex-nowrap items-center self-center overflow-hidden my-3 ml-0 animate-scrollHorizontal'>
         {imagesToRender.map((image, i) => 
-          <li key={i} className={`flex justify-center items-center flex-shrink-0 my-2 px-3 animate-fadeIn animation-delay-400 transition duration-300 ease-in-out hover:-translate-y-2`}>
+          <li 
+            key={i} 
+            className='flex justify-center items-center flex-shrink-0 my-2 px-3 transition duration-300 ease-in-out hover:-translate-y-2'
+          >
             <Image src={image} alt='tech-images' width={i%images.length < 8 ? 80 : 60} className='w-full h-full transition duration-500 grayscale hover:grayscale-0'/>
           </li>
         )}
