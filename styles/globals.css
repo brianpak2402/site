@@ -19,7 +19,7 @@
     li, p {
         @apply text-black/60;
         @apply font-semibold;
-        @apply text-xs;
+        @apply text-sm;
         @apply md:text-lg;
     }
     strong {

@@ -44,7 +44,7 @@ export default function Home() {
           <BiDownArrowAlt className='h-14 w-14'/>
         </motion.button>
       </section>
-      <section id="about" className='h-screen-3/4 md:h-screen/2' ref={aboutSection}>
+      <section id="about" ref={aboutSection}>
         <div className='flex flex-row self-center bg-slate-300 h-full w-full justify-between'>
           <div className='m-5 items-start w-1/4 px-5'>
             <ul className='roboto-mono'>
@@ -169,7 +169,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='bg-white h-screen/2 flex flex-col items-center'>
+      <section className='bg-white flex flex-col items-center'>
         <motion.h1 
           className='my-5'
           whileInView={{ opacity: [0, 1], y: [200, 0] }}
