@@ -156,7 +156,7 @@ export default function Home() {
               {/* Don't know what I mean? Come check us out! */}
             </motion.p>
             <motion.button 
-              className='bg-notion-legacy-red rounded-full text-white px-4 py-2 my-1 md:my-5 hover:translate-y-1'
+              className='bg-notion-legacy-red rounded-full text-white px-4 py-2 md:my-5 hover:translate-y-1'
               whileInView={{ opacity:[0, 0.7, 1], y: [200, 10, 0] }}
               transition={{ type: "tween", duration:1.2, ease: "easeOut" }}
               viewport={{ once: true }}
