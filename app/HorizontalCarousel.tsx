@@ -11,7 +11,6 @@ import TailwindLogo from '../public/images/tailwind-logo.png';
 import SpotifyAPILogo from '../public/images/spotify-api-logo.png';
 import TypeScriptLogo from '../public/images/typescript-logo.png';
 import ChakraUILogo from '../public/images/chakra-ui-logo.png';
-import WebSocketsLogo from '../public/images/websocket-logo.png';
 import FramerMotionLogo from '../public/images/framer-motion-logo.png';
 
 const images:StaticImageData[] = [
@@ -22,7 +21,6 @@ const images:StaticImageData[] = [
   AxiosLogo,
   SpringBootLogo,
   SpotifyAPILogo,
-  WebSocketsLogo,
   ReactLogo,
   JavaScriptLogo,
   TypeScriptLogo,
@@ -37,7 +35,7 @@ export default function HorizontalCarousel() {
       <ul className='w-screen flex flex-nowrap items-center self-center ml-0 animate-scrollHorizontal'>
         {imagesToRender.map((image, i) => 
           <li key={i} className='flex justify-center items-center flex-shrink-0 my-2 px-3 transition duration-300 ease-in-out hover:-translate-y-2'>
-            <Image src={image} alt='tech-logo' width={i%images.length < 8 ? 80 : 60} className='w-full h-full transition duration-500 grayscale hover:grayscale-0'/>
+            <Image src={image} alt='tech-logo' width={i%images.length < 7 ? 80 : 60} className='w-full h-full transition duration-500 grayscale hover:grayscale-0'/>
           </li>
         )}
       </ul>

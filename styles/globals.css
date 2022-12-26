@@ -16,16 +16,22 @@
     h4 {
         @apply text-xl;
     }
-    p {
+    li, p {
         @apply text-black/60;
         @apply font-semibold;
+        @apply text-xs;
+        @apply md:text-lg;
     }
     strong {
         @apply text-black;
         @apply font-bold;
+        @apply text-xs;
+        @apply md:text-base;
+        
     }
     button {
-        @apply font-medium
+        @apply font-light;
+        @apply md:font-medium
     }
     html {
         @apply scroll-smooth
@@ -34,11 +40,6 @@
 
 h1, h2, h3, h4, p, html, button {
     font-family: inter-var, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";;
-}
-
-html {
-    font-size: 16px;
-    font-weight: 400;
 }
 
 .inter-var{
