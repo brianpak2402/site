@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-// hi
+
 import type { Technology } from '../typings/typings';
 
 import Link from 'next/link';
@@ -157,7 +157,7 @@ export default function Home() {
             transition={{ type: "tween", duration:0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            I am an undergraduate student pursuing a degree in computer science at the Georgia Institute of Technology 🐝, and I love developing 
+            I am an undergraduate student pursuing a degree in computer science at the Georgia Institute of Technology <strong>🐝</strong>, and I love developing 
             APIs and full-stack applications that support all kinds of user experiences. 
           </motion.p>
           <motion.p 
@@ -167,7 +167,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             Two years ago, I transitioned from studying cello performance to computer science, and I have since built many web
-            applications using technologies like React ⚛️, Spring Boot, Next.js, Tailwind CSS, and Express. I also have strong programming experience 
+            applications using technologies like React <strong>⚛</strong>, Spring Boot, Next.js, Tailwind CSS, and Express. I also have strong programming experience 
             with Java, JavaScript, and C as demonstrated through my previous coursework.
           </motion.p>
           <motion.p 
@@ -176,12 +176,12 @@ export default function Home() {
             transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Right now, I am working with the GT WebDev club to build Spotify Jukebox 🎶: a full-stack, serverless application 
+            Right now, I am working with the GT WebDev club to build Spotify Jukebox <strong>🎶</strong>: a full-stack, serverless application 
             that hosts virtual jukebox sessions.
             {/* Don't know what I mean? Come check us out! */}
           </motion.p>
           <motion.button 
-            className='bg-notion-legacy-red rounded-full text-white px-4 py-2 lg:my-5 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'
+            className=' text-white'
             whileInView={{ opacity:[0, 0.7, 1], y: [200, 10, 0] }}
             transition={{ type: "tween", duration:1.2, ease: "easeOut", times: [0, 0.9, 1] }}
             viewport={{ once: true }}
@@ -189,7 +189,9 @@ export default function Home() {
               window.open("/Pak_Brian_Resume.pdf");
             }}
           >
-            Download My Resume
+            <div className='bg-notion-legacy-red rounded-full px-4 py-2 lg:my-5 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
+              Download My Resume
+            </div>
           </motion.button>
         </div>
       </section>
@@ -214,7 +216,7 @@ export default function Home() {
           whileInView={{ opacity:[0,1], y: [200,0]}}
           transition={{ type: "tween", duration: 0.7,  ease: "easeOut" }}
           viewport={{ once: true }}
-          className='my-4'
+          className='my-4 w-screen overflow-hidden'
         >
           <HorizontalCarousel />
         </motion.div>
@@ -228,8 +230,8 @@ export default function Home() {
             >
               Languages
             </motion.h3>
-            <div className='flex flex-wrap justify-center my-2'>
-              {languages.map((item, i) => <TechnologyItem {...item} key={i}/>)}
+            <div className='flex flex-wrap justify-center my-2 h-auto'>
+              {languages.map((item, i) => <TechnologyItem item={item} index={i} key={i}/>)}
             </div>
           </div>
           <div className='flex flex-col w-screen lg:w-1/3'>
@@ -241,8 +243,8 @@ export default function Home() {
             >
               Frontend Technologies
             </motion.h3>
-            <div className='flex flex-wrap justify-center my-2'>
-              {frontendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
+            <div className='flex flex-wrap justify-center my-2 h-full'>
+              {frontendTech.map((item, i) => <TechnologyItem item={item} index={i} key={i}/>)}
             </div>
           </div>
           <div className='flex flex-col w-screen lg:w-1/3'>
@@ -254,8 +256,8 @@ export default function Home() {
             >
               Backend Technologies & APIs
             </motion.h3>
-            <div className='flex flex-wrap justify-center mt-2 mb-4'>
-              {backendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
+            <div className='flex flex-wrap justify-center mt-2 mb-4 h-full'>
+              {backendTech.map((item, i) => <TechnologyItem item={item} index={i} key={i}/>)}
             </div>
           </div>
         </div>
@@ -267,7 +269,7 @@ export default function Home() {
           transition={{ type:"tween", duration: 1, ease: "easeOut"}}
           viewport={{ once: true }}
         >
-          My Projects
+          Featured Projects
         </motion.h1>
         <div className='flex flex-col items-center lg:flex-row screen mx-5 lg:mx-20'>
           {projectList.map((project, i) => 

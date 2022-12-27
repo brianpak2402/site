@@ -32,7 +32,7 @@ const projectList : Project[] = [
         image: buzzconnectScreenshot,
         liveURL: "/",
         demoLink: "/",
-        codeLink: "/",
+        codeLink: "https://github.com/brianpak2402/BuzzConnect",
     }, 
 ];
 
