@@ -181,9 +181,9 @@ export default function Home() {
             {/* Don't know what I mean? Come check us out! */}
           </motion.p>
           <motion.button 
-            className='bg-notion-legacy-red rounded-full text-white px-4 py-2 lg:my-5 hover:-translate-y-1'
+            className='bg-notion-legacy-red rounded-full text-white px-4 py-2 lg:my-5 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'
             whileInView={{ opacity:[0, 0.7, 1], y: [200, 10, 0] }}
-            transition={{ type: "tween", duration:1.2, ease: "easeOut" }}
+            transition={{ type: "tween", duration:1.2, ease: "easeOut", times: [0, 0.9, 1] }}
             viewport={{ once: true }}
             onClick={() => {
               window.open("/Pak_Brian_Resume.pdf");
@@ -195,24 +195,24 @@ export default function Home() {
       </section>
       <section className='bg-white h-auto lg:h-screen/2 flex flex-col items-center'>
         <motion.h1 
-          className='my-5'
           whileInView={{ opacity: [0, 1], y: [200, 0] }}
           transition={{ type: "tween", duration: 0.6, ease: "easeInOut"}}
           viewport={{ once: true }}
+          className='my-5'
         >
           My Technologies
         </motion.h1>
         <motion.p 
-          className='lg:mx-60 text-center'
           whileInView={{ opacity:[0,1], y: [200,0]}}
           transition={{ type: "tween", duration: 0.7,  ease: "easeOut" }}
           viewport={{ once: true }}
+          className='lg:mx-60 text-center'
         >
           Below are all the technologies that I have enjoyed using in projects that I've worked on in the past.
         </motion.p>
         <motion.div 
-          whileInView={{ opacity: [0,1], y: [200, 0] }}
-          transition={{ type: "tween", duration: 1, ease: "easeOut" }}
+          whileInView={{ opacity:[0,1], y: [200,0]}}
+          transition={{ type: "tween", duration: 0.7,  ease: "easeOut" }}
           viewport={{ once: true }}
           className='my-4'
         >
@@ -220,19 +220,40 @@ export default function Home() {
         </motion.div>
         <div className='w-screen mb-5 flex flex-col lg:flex-row items-center lg:justify-evenly'>
           <div className='flex flex-col w-screen lg:w-1/3'>
-            <h3 className='text-center my-2'>Languages</h3>
+            <motion.h3 
+              whileInView={{ opacity: [0,1], y: [200, 0] }}
+              transition={{ type: "tween", duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className='text-center my-2'
+            >
+              Languages
+            </motion.h3>
             <div className='flex flex-wrap justify-center my-2'>
               {languages.map((item, i) => <TechnologyItem {...item} key={i}/>)}
             </div>
           </div>
           <div className='flex flex-col w-screen lg:w-1/3'>
-            <h3 className='text-center my-2'>Frontend Technologies</h3>
+            <motion.h3 
+              whileInView={{ opacity: [0,1], y: [200, 0] }}
+              transition={{ type: "tween", duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className='text-center my-2'
+            >
+              Frontend Technologies
+            </motion.h3>
             <div className='flex flex-wrap justify-center my-2'>
               {frontendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
             </div>
           </div>
           <div className='flex flex-col w-screen lg:w-1/3'>
-            <h3 className='text-center justify-center my-2'>Backend Technologies & APIs</h3>
+            <motion.h3 
+              whileInView={{ opacity: [0,1], y: [200, 0] }}
+              transition={{ type: "tween", duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className='text-center justify-center my-2'
+            >
+              Backend Technologies & APIs
+            </motion.h3>
             <div className='flex flex-wrap justify-center mt-2 mb-4'>
               {backendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
             </div>
