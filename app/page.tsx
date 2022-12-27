@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <section className='flex flex-col h-screen w-screen justify-center'>
-        <div className='flex flex-col items-center md:items-end box-border md:mr-40 mt-auto' >
+        <div className='flex flex-col items-center lg:items-end box-border lg:mr-40 mt-auto' >
           <motion.h1 
             animate={{ opacity: [0, 1], y: [200, 0] }}
             transition={{ type: "tween", duration: 1, ease: "easeInOut"}}
@@ -70,7 +70,7 @@ export default function Home() {
           <BiDownArrowAlt className='h-14 w-14'/>
         </motion.button>
       </section>
-      <section id="about" ref={aboutSection} className='bg-slate-300 h-auto md:h-screen/2 w-screen flex flex-row self-center justify-between'>
+      <section id="about" ref={aboutSection} className='bg-slate-300 h-auto lg:h-screen/2 w-screen flex flex-row self-center justify-between'>
         <div className='m-5 items-start w-1/4 px-5'>
           <ul className='roboto-mono'>
             <motion.li 
@@ -114,7 +114,7 @@ export default function Home() {
               <p> <strong className='text-black'>HOMETOWN: </strong> Duluth, GA </p>
             </motion.li>
           </ul>
-          <div className='flex flex-row justify-evenly self-center md:pt-4'>
+          <div className='flex flex-row justify-evenly self-center lg:pt-4'>
             <motion.button 
               className='w-10 h-10 hover:rounded-full'
               whileInView={{ opacity: [0, 1], x: [-100, 0]}}
@@ -157,7 +157,7 @@ export default function Home() {
             transition={{ type: "tween", duration:0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            I am an undergraduate student pursuing a degree in computer science at the Georgia Institute of Technology, and I love developing 
+            I am an undergraduate student pursuing a degree in computer science at the Georgia Institute of Technology 🐝, and I love developing 
             APIs and full-stack applications that support all kinds of user experiences. 
           </motion.p>
           <motion.p 
@@ -167,7 +167,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             Two years ago, I transitioned from studying cello performance to computer science, and I have since built many web
-            applications using technologies like React, Spring Boot, Next.js, Tailwind CSS, and Express. I also have strong programming experience 
+            applications using technologies like React ⚛️, Spring Boot, Next.js, Tailwind CSS, and Express. I also have strong programming experience 
             with Java, JavaScript, and C as demonstrated through my previous coursework.
           </motion.p>
           <motion.p 
@@ -176,12 +176,12 @@ export default function Home() {
             transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Right now, I am working with the GT WebDev club to build Spotify Jukebox: a full-stack, serverless application 
+            Right now, I am working with the GT WebDev club to build Spotify Jukebox 🎶: a full-stack, serverless application 
             that hosts virtual jukebox sessions.
             {/* Don't know what I mean? Come check us out! */}
           </motion.p>
           <motion.button 
-            className='bg-notion-legacy-red rounded-full text-white px-4 py-2 md:my-5 hover:-translate-y-1'
+            className='bg-notion-legacy-red rounded-full text-white px-4 py-2 lg:my-5 hover:-translate-y-1'
             whileInView={{ opacity:[0, 0.7, 1], y: [200, 10, 0] }}
             transition={{ type: "tween", duration:1.2, ease: "easeOut" }}
             viewport={{ once: true }}
@@ -193,7 +193,7 @@ export default function Home() {
           </motion.button>
         </div>
       </section>
-      <section className='bg-white h-auto md:h-screen/2 flex flex-col items-center'>
+      <section className='bg-white h-auto lg:h-screen/2 flex flex-col items-center'>
         <motion.h1 
           className='my-5'
           whileInView={{ opacity: [0, 1], y: [200, 0] }}
@@ -203,7 +203,7 @@ export default function Home() {
           My Technologies
         </motion.h1>
         <motion.p 
-          className='md:mx-60 text-center'
+          className='lg:mx-60 text-center'
           whileInView={{ opacity:[0,1], y: [200,0]}}
           transition={{ type: "tween", duration: 0.7,  ease: "easeOut" }}
           viewport={{ once: true }}
@@ -218,22 +218,22 @@ export default function Home() {
         >
           <HorizontalCarousel />
         </motion.div>
-        <div className='w-screen flex flex-col md:flex-row items-center md:justify-evenly'>
-          <div className='flex flex-col w-screen md:w-1/3'>
+        <div className='w-screen mb-5 flex flex-col lg:flex-row items-center lg:justify-evenly'>
+          <div className='flex flex-col w-screen lg:w-1/3'>
             <h3 className='text-center my-2'>Languages</h3>
-            <div className='flex my-2'>
+            <div className='flex flex-wrap justify-center my-2'>
               {languages.map((item, i) => <TechnologyItem {...item} key={i}/>)}
             </div>
           </div>
-          <div className='flex flex-col w-screen md:w-1/3'>
+          <div className='flex flex-col w-screen lg:w-1/3'>
             <h3 className='text-center my-2'>Frontend Technologies</h3>
-            <div className='flex flex-wrap my-2'>
+            <div className='flex flex-wrap justify-center my-2'>
               {frontendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
             </div>
           </div>
-          <div className='flex flex-col w-screen md:w-1/3'>
-            <h3 className='text-center my-2'>Backend Technologies & APIs</h3>
-            <div className='flex flex-wrap mt-2 mb-4'>
+          <div className='flex flex-col w-screen lg:w-1/3'>
+            <h3 className='text-center justify-center my-2'>Backend Technologies & APIs</h3>
+            <div className='flex flex-wrap justify-center mt-2 mb-4'>
               {backendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function Home() {
         >
           My Projects
         </motion.h1>
-        <div className='flex flex-col items-center md:flex-row screen mx-5 md:mx-20'>
+        <div className='flex flex-col items-center lg:flex-row screen mx-5 lg:mx-20'>
           {projectList.map((project, i) => 
             <ProjectCard {...project} key={i} />
           )}

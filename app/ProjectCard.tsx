@@ -12,7 +12,7 @@ import { Project } from '../typings/typings';
 
 const ProjectCard = (props: Project) => {
   return (
-    <div className='flex flex-col items-center mx-3 md:mx-5 my-5 md:my-5  w-auto md:w-1/2 h-auto'>
+    <div className='flex flex-col items-center mx-3 lg:mx-5 my-5 lg:my-5  w-auto lg:w-1/2 h-auto'>
       {props.liveURL !== "/" &&
         <Link href={props.liveURL}>
           <Image src={props.image} alt='project-screenshot' height={300} className={`rounded-2xl ${props.liveURL !== '/' ? 'hover:opacity-90' : ''}`}/>
@@ -22,8 +22,8 @@ const ProjectCard = (props: Project) => {
         <Image src={props.image} alt='project-screenshot' height={300} className={`rounded-2xl ${props.liveURL !== '/' ? 'hover:opacity-90' : ''}`}/>
       }
       <div className='h-auto w-full flex flex-col mx-5'>
-        <h2 className='text-center my-3 w-full'>{props.name}</h2>
-        <div className='flex flex-wrap w-auto mx-8'>
+        <h1 className='text-center my-3 w-full'>{props.name}</h1>
+        <div className='flex flex-wrap justify-center w-auto mx-8'>
           {props.technologies.map((item, i) => 
             <TechnologyItem {...item} key={i}/>  
           )}
@@ -34,7 +34,7 @@ const ProjectCard = (props: Project) => {
         <div className='flex justify-center'>
           {props.demoLink === '/' && 
             <button 
-              className='rounded-full mx-2 bg-notion-text-default text-white px-4 py-1 md:my-5 flex flex-row items-center'
+              className='rounded-full mx-2 bg-notion-text-default text-white px-4 py-1 lg:my-5 flex flex-row items-center'
             >
               <MdError className='mr-2'/>
               Demo Not Available
@@ -42,7 +42,7 @@ const ProjectCard = (props: Project) => {
           }
           {props.demoLink !== '/' &&
             <button 
-              className='rounded-full mx-2 bg-black text-white px-4 py-1 md:my-5 flex flex-row items-center transition-all hover:-translate-y-1'
+              className='rounded-full mx-2 bg-black text-white px-4 py-1 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'
               onClick={() => {
                 window.open(props.demoLink);
               }}
@@ -53,15 +53,15 @@ const ProjectCard = (props: Project) => {
           }
           {props.codeLink === '/' && 
             <button 
-              className='rounded-full bg-notion-text-default text-white px-4 py-1 md:my-5 flex flex-row items-center'
+              className='rounded-full bg-notion-text-default text-white px-4 py-1 lg:my-5 flex flex-row items-center'
             >
               <MdError className='mr-2'/>
-              No Code Available
+              Code is Not Public 
             </button>
           }
           {props.codeLink !== '/' && 
             <button 
-              className='rounded-full bg-black text-white px-4 py-1 md:my-5 flex flex-row items-center transition-all hover:-translate-y-1'
+              className='rounded-full bg-black text-white px-4 py-1 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'
               onClick={() => {
                 window.open(props.codeLink);
               }}
