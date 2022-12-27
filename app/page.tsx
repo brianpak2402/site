@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-
+// hi
 import type { Technology } from '../typings/typings';
 
 import Link from 'next/link';
