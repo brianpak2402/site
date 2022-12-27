@@ -14,13 +14,13 @@ import ChakraUILogo from '../assets/images/logos/chakra-ui-logo.png';
 import FramerMotionLogo from '../assets/images/logos/framer-motion-logo.png';
 
 const images:StaticImageData[] = [
-  SSTLogo,
-  NextLogo,
   TailwindLogo,
   ChakraUILogo,
+  SSTLogo,
   AxiosLogo,
   SpringBootLogo,
   SpotifyAPILogo,
+  NextLogo,
   ReactLogo,
   JavaScriptLogo,
   TypeScriptLogo,

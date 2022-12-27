@@ -1,18 +1,41 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
+import type { Technology } from '../typings/typings';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
+
 import HorizontalCarousel from './HorizontalCarousel';
 import ProjectCard from './ProjectCard';
+import TechnologyItem from './TechnologyItem';
+import projectList from '../assets/data/projects';
+import techMap from '../assets/data/technologies';
 
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BiDownArrowAlt } from 'react-icons/bi';
 import { SiHandshake } from 'react-icons/si';
 
-import projectList from '../assets/data/projects';
+const languages : Technology[] = [
+  techMap.get("Java") as Technology,
+  techMap.get("JavaScript") as Technology,
+  techMap.get("TypeScript") as Technology,
+]
 
+const frontendTech: Technology[] = [
+  techMap.get("React") as Technology,
+  techMap.get("Next.js") as Technology,
+  techMap.get("Chakra UI") as Technology,
+  techMap.get("Tailwind CSS") as Technology,
+  techMap.get("Framer Motion") as Technology,
+]
+
+const backendTech: Technology[] = [
+  techMap.get("Spring Boot") as Technology,
+  techMap.get("Serverless Stack Toolkit") as Technology,
+  techMap.get("Spotify API") as Technology,
+]
 
 // eventually replace title with my image.
 export default function Home() {
@@ -32,7 +55,7 @@ export default function Home() {
             animate={{ opacity: [0,1], y:[200,0] }}
             transition={{ type: "tween", duration: 1.20, ease: "easeInOut"}}
           >
-            Student Developer 
+            Student Software Developer 
           </motion.p>
         </div>
         <motion.button
@@ -47,7 +70,7 @@ export default function Home() {
           <BiDownArrowAlt className='h-14 w-14'/>
         </motion.button>
       </section>
-      <section id="about" ref={aboutSection} className='flex flex-row self-center bg-slate-300 h-full w-full justify-between'>
+      <section id="about" ref={aboutSection} className='bg-slate-300 h-auto md:h-screen/2 w-screen flex flex-row self-center justify-between'>
         <div className='m-5 items-start w-1/4 px-5'>
           <ul className='roboto-mono'>
             <motion.li 
@@ -170,7 +193,7 @@ export default function Home() {
           </motion.button>
         </div>
       </section>
-      <section className='bg-white flex flex-col items-center'>
+      <section className='bg-white h-auto md:h-screen/2 flex flex-col items-center'>
         <motion.h1 
           className='my-5'
           whileInView={{ opacity: [0, 1], y: [200, 0] }}
@@ -185,7 +208,7 @@ export default function Home() {
           transition={{ type: "tween", duration: 0.7,  ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Below are all the technologies that I have worked with in past projects.
+          Below are all the technologies that I have enjoyed using in projects that I've worked on in the past.
         </motion.p>
         <motion.div 
           whileInView={{ opacity: [0,1], y: [200, 0] }}
@@ -195,6 +218,26 @@ export default function Home() {
         >
           <HorizontalCarousel />
         </motion.div>
+        <div className='w-screen flex flex-col md:flex-row items-center md:justify-evenly'>
+          <div className='flex flex-col w-screen md:w-1/3'>
+            <h3 className='text-center my-2'>Languages</h3>
+            <div className='flex my-2'>
+              {languages.map((item, i) => <TechnologyItem {...item} key={i}/>)}
+            </div>
+          </div>
+          <div className='flex flex-col w-screen md:w-1/3'>
+            <h3 className='text-center my-2'>Frontend Technologies</h3>
+            <div className='flex flex-wrap my-2'>
+              {frontendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
+            </div>
+          </div>
+          <div className='flex flex-col w-screen md:w-1/3'>
+            <h3 className='text-center my-2'>Backend Technologies & APIs</h3>
+            <div className='flex flex-wrap mt-2 mb-4'>
+              {backendTech.map((item, i) => <TechnologyItem {...item} key={i}/>)}
+            </div>
+          </div>
+        </div>
       </section>
       <section className=' bg-slate-300 flex flex-col'>
         <motion.h1 
@@ -205,7 +248,7 @@ export default function Home() {
         >
           My Projects
         </motion.h1>
-        <div className='md:mx-10 mx-20'>
+        <div className='flex flex-col items-center md:flex-row screen mx-5 md:mx-20'>
           {projectList.map((project, i) => 
             <ProjectCard {...project} key={i} />
           )}

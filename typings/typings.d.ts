@@ -10,6 +10,7 @@ export type Project = {
     description: string;
     technologies: Technology[];
     image: StaticImageData;
+    liveURL: string;
     demoLink: string;
     codeLink: string;
 }

@@ -1,4 +1,5 @@
-import type { Project } from "../../typings/typings";
+import type { Project, Technology } from "../../typings/typings";
+import techMap from "./technologies";
 
 import jukeboxScreenshot from "../images/screenshots/jukebox-screenshot.png";
 import buzzconnectScreenshot from '../images/screenshots/buzzconnect-screenshot.png';
@@ -9,12 +10,13 @@ const projectList : Project[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed \
                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         technologies: [
-            {
-                name: "Java",
-                color: "brown",
-            }
+            techMap.get("Serverless Stack Toolkit") as Technology,
+            techMap.get("React") as Technology,
+            techMap.get("Chakra UI") as Technology,
+            techMap.get("Spotify API") as Technology,
         ],
         image: jukeboxScreenshot,
+        liveURL: "/",
         demoLink: "/",
         codeLink: "/",
     }, 
@@ -23,12 +25,12 @@ const projectList : Project[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed \
                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         technologies: [
-            {
-                name: "Java",
-                color: "brown",
-            }
+            techMap.get("Spring Boot") as Technology,
+            techMap.get("Java") as Technology,
+            techMap.get("SQL") as Technology,
         ],
         image: buzzconnectScreenshot,
+        liveURL: "/",
         demoLink: "/",
         codeLink: "/",
     }, 
