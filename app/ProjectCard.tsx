@@ -60,7 +60,7 @@ const ProjectCard = (props: Project) => {
               whileInView={{ opacity: [0,1], y: [200, 0] }}
               transition={{ type: "tween", duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className='rounded-full bg-notion-text-default text-white mx-1 px-4 py-1 lg:my-5 flex flex-row items-center'
+              className=' bg-notion-text-default text-white mx-2 px-1 md:px-4 py-1 lg:my-5 flex rounded-full flex-row items-center'
             >
               <MdError className='mr-2'/>
               Demo Not Available
@@ -76,7 +76,7 @@ const ProjectCard = (props: Project) => {
                 window.open(props.demoLink);
               }}
             >
-              <div className=' bg-black rounded-full px-4 py-1 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'>
+              <div className=' bg-black rounded-full px-4 py-1 mx-2 md:px-4 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'>
                 <AiOutlineEye className='mr-2'/>
                 Demo
               </div>
@@ -87,7 +87,7 @@ const ProjectCard = (props: Project) => {
               whileInView={{ opacity: [0,1], y: [200, 0] }}
               transition={{ type: "tween", duration: 1.25, ease: "easeOut" }}
               viewport={{ once: true }}
-              className=' bg-notion-text-default text-white mx-1 px-4 py-1 lg:my-5 flex rounded-full flex-row items-center'
+              className=' bg-notion-text-default text-white mx-1 px-2 md:px-4 py-1 lg:my-5 flex rounded-full flex-row items-center'
             >
               <MdError className='mr-2'/>
               Code Not Public 
@@ -103,7 +103,7 @@ const ProjectCard = (props: Project) => {
                 window.open(props.codeLink);
               }}
             >
-              <div className=' bg-black rounded-full px-4 py-1 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'>
+              <div className=' bg-black rounded-full px-2 md:px-4 py-1 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'>
                 <FiCode className='mr-2'/>
                 Code
               </div>
