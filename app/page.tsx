@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col">
-      <section className='flex flex-col h-screen-3/4 sm:h-screen w-screen justify-center'>
+      <section className='flex flex-col h-screen w-screen justify-center'>
         <div className='flex flex-col items-center lg:items-end box-border lg:mr-40 mt-auto' >
           <motion.h1 
             animate={{ opacity: [0, 1], y: [200, 0] }}
