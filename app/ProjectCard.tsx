@@ -69,7 +69,7 @@ const ProjectCard : React.FC<IProjectCardProps> = ({item, index}: IProjectCardPr
         <div className='flex justify-center'>
           {item.demoLink === '/' && 
             <motion.button 
-              whileInView={{ opacity: [0,1], y: [200, 0] }}
+              whileInView={{ opacity: [0,1], y: [100, 0] }}
               transition={{ type: "tween", duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
               className=' bg-notion-text-default text-white px-1 md:px-4 py-1 mx-1 lg:mx-2 lg:my-5 flex rounded-full flex-row items-center'
@@ -80,7 +80,7 @@ const ProjectCard : React.FC<IProjectCardProps> = ({item, index}: IProjectCardPr
           }
           {item.demoLink !== '/' &&
             <motion.button 
-              whileInView={{ opacity: [0,1], y: [200, 0] }}
+              whileInView={{ opacity: [0,1], y: [100, 0] }}
               transition={{ type: "tween", duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
               className='text-white mx-1'
@@ -96,7 +96,7 @@ const ProjectCard : React.FC<IProjectCardProps> = ({item, index}: IProjectCardPr
           }
           {item.codeLink === '/' && 
             <motion.button 
-              whileInView={{ opacity: [0,1], y: [200, 0] }}
+              whileInView={{ opacity: [0,1], y: [100, 0] }}
               transition={{ type: "tween", duration: 1.25, ease: "easeOut" }}
               viewport={{ once: true }}
               className=' bg-notion-text-default text-white px-1 md:px-4 py-1 mx-1 lg:mx-2 lg:my-5 flex rounded-full flex-row items-center'
@@ -107,7 +107,7 @@ const ProjectCard : React.FC<IProjectCardProps> = ({item, index}: IProjectCardPr
           }
           {item.codeLink !== '/' && 
             <motion.button 
-              whileInView={{ opacity: [0,1], y: [200, 0] }}
+              whileInView={{ opacity: [0,1], y: [100, 0] }}
               transition={{ type: "tween", duration: 1.25, ease: "easeOut" }}
               viewport={{ once: true }}
               className=' text-white mx-1'

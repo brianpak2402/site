@@ -27,14 +27,13 @@ const frontendTech: Technology[] = [
   techMap.get("Tailwind CSS") as Technology,
   techMap.get("Chakra UI") as Technology,
   techMap.get("React") as Technology,
-  techMap.get("Framer Motion") as Technology,
   techMap.get("Next.js") as Technology,
 ]
 
 const backendTech: Technology[] = [
-  techMap.get("Spring Boot") as Technology,
   techMap.get("Serverless Stack Toolkit") as Technology,
-  techMap.get("Spotify API") as Technology,
+  techMap.get("Spring Boot") as Technology,
+  techMap.get("Axios") as Technology,
 ]
 
 // eventually replace title with my image.
@@ -166,9 +165,9 @@ export default function Home() {
             transition={{ type: "tween", duration:0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Two years ago, I transitioned from studying cello performance to computer science, and I have since built many web
-            applications using technologies like React <strong>⚛</strong>, Spring Boot, Next.js, Tailwind CSS, and Express. I also have strong programming experience 
-            with Java, JavaScript, and C as demonstrated through my previous coursework.
+            Two years ago, I transitioned from studying cello performance to computer science, and I have since built many web applications using technologies like 
+            React <strong>⚛</strong>, Spring Boot, Next.js, Tailwind CSS, and Express. I've also gained strong programming experience with Java, JavaScript, and C through
+            courses like Objects & Design (CS 2340) and Computer Programming & Organization (CS 2110).
           </motion.p>
           <motion.p 
             className='my-2'
@@ -176,9 +175,9 @@ export default function Home() {
             transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Right now, I am working with the GT WebDev club to build Spotify Jukebox <strong>🎶</strong>: a full-stack, serverless application 
-            that hosts virtual jukebox sessions.
-            {/* Don't know what I mean? Come check us out! */}
+            Right now, I am learning about Next.js 13 (beta), Tailwind CSS, Express, and GraphQL so that I can build more powerful APIs and 
+            user-interfaces that take advantage of server-side rendering. I am also seeking a Software Engineering internship that will allow me 
+            to gain practical experience in full-stack and API development during this coming summer.
           </motion.p>
           <motion.button 
             className=' text-white'
@@ -189,7 +188,7 @@ export default function Home() {
               window.open("/Pak_Brian_Resume.pdf");
             }}
           >
-            <div className='bg-notion-legacy-red rounded-full px-4 py-2 lg:my-2 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
+            <div className='bg-notion-legacy-red rounded-full px-4 py-2 my-2 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
               Download My Resume
             </div>
           </motion.button>
@@ -208,9 +207,9 @@ export default function Home() {
           whileInView={{ opacity:[0,1], y: [200,0]}}
           transition={{ type: "tween", duration: 0.7,  ease: "easeOut" }}
           viewport={{ once: true }}
-          className='lg:mx-60 text-center'
+          className='mx-5 lg:mx-60 text-center'
         >
-          Below are all the technologies that I have enjoyed using in projects that I've worked on in the past.
+          Below are all the technologies that I have enjoyed using in projects that I've enjoyed working with in the past.
         </motion.p>
         <motion.div 
           whileInView={{ opacity:[0,1], y: [200,0]}}

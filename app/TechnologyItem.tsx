@@ -16,7 +16,7 @@ const TechnologyItem : React.FC<ITechItemProps> = ({item, index}: ITechItemProps
       className='text-white'
     >
       <div className={`
-          transition-all hover:scale-110 rounded-md w-fit h-fit mx-1 my-1 px-3 
+          transition-all hover:scale-105 rounded-md w-fit h-fit mx-1 my-1 px-3 
           ${item.color === 'red' ? 'bg-notion-text-red' : ""}
           ${item.color === 'orange' ? 'bg-notion-text-orange' : ""}
           ${item.color === 'yellow' ? 'bg-notion-text-yellow' : ""}

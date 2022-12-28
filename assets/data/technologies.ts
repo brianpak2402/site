@@ -46,15 +46,15 @@ const technologies : Technology[] = [
         color: "pink",
     },
     {
+        name: "SQL",
+        color: "pink",
+    },
+    {
         name: "Java",
         color: "brown",
     },
     {
         name: "Next.js",
-        color: "gray",
-    },
-    {
-        name: "SQL",
         color: "gray",
     },
 ]
