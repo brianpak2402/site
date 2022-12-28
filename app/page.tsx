@@ -18,17 +18,17 @@ import { BiDownArrowAlt } from 'react-icons/bi';
 import { SiHandshake } from 'react-icons/si';
 
 const languages : Technology[] = [
-  techMap.get("Java") as Technology,
   techMap.get("JavaScript") as Technology,
   techMap.get("TypeScript") as Technology,
+  techMap.get("Java") as Technology,
 ]
 
 const frontendTech: Technology[] = [
-  techMap.get("React") as Technology,
-  techMap.get("Next.js") as Technology,
-  techMap.get("Chakra UI") as Technology,
   techMap.get("Tailwind CSS") as Technology,
+  techMap.get("Chakra UI") as Technology,
+  techMap.get("React") as Technology,
   techMap.get("Framer Motion") as Technology,
+  techMap.get("Next.js") as Technology,
 ]
 
 const backendTech: Technology[] = [
@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col">
-      <section className='flex flex-col h-screen w-screen justify-center'>
+      <section className='flex flex-col h-screen-3/4 sm:h-screen w-screen justify-center'>
         <div className='flex flex-col items-center lg:items-end box-border lg:mr-40 mt-auto' >
           <motion.h1 
             animate={{ opacity: [0, 1], y: [200, 0] }}
@@ -70,8 +70,8 @@ export default function Home() {
           <BiDownArrowAlt className='h-14 w-14'/>
         </motion.button>
       </section>
-      <section id="about" ref={aboutSection} className='bg-slate-300 h-auto lg:h-screen/2 w-screen flex flex-row self-center justify-between'>
-        <div className='m-5 items-start w-1/4 px-5'>
+      <section id="about" ref={aboutSection} className='bg-slate-300 h-auto lg:h-screen/2 w-screen flex flex-col sm:flex-row self-center justify-between'>
+        <div className='m-5 items-start w-screen sm:w-1/4 px-5'>
           <ul className='roboto-mono'>
             <motion.li 
               className='py-2 flex flex-row border-b border-b-black/60'
@@ -150,7 +150,7 @@ export default function Home() {
             </motion.button>
           </div>
         </div>
-        <div className='mr-8 py-6 w-3/4'>
+        <div className='text-center sm:text-left sm:mr-8 px-3 pt-2 pb-4 sm:py-6 w-screen sm:w-3/4'>
           <motion.p 
             className='my-2'
             whileInView={{ opacity:[0,1], y: [200,0]}}
@@ -189,7 +189,7 @@ export default function Home() {
               window.open("/Pak_Brian_Resume.pdf");
             }}
           >
-            <div className='bg-notion-legacy-red rounded-full px-4 py-2 lg:my-5 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
+            <div className='bg-notion-legacy-red rounded-full px-4 py-2 lg:my-2 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
               Download My Resume
             </div>
           </motion.button>
@@ -273,7 +273,7 @@ export default function Home() {
         </motion.h1>
         <div className='flex flex-col items-center lg:flex-row screen mx-5 lg:mx-20'>
           {projectList.map((project, i) => 
-            <ProjectCard {...project} key={i} />
+            <ProjectCard item={project} index={i} key={i} />
           )}
         </div>
       </section>

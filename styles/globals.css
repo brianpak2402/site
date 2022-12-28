@@ -20,7 +20,7 @@
         @apply text-black/60;
         @apply font-semibold;
         @apply text-sm;
-        @apply lg:text-lg;
+        @apply lg:text-base;
     }
     strong {
         @apply text-black;

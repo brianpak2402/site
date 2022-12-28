@@ -10,27 +10,39 @@ import { MdError } from 'react-icons/md';
 
 import { Project } from '../typings/typings';
 
+interface IProjectCardProps {
+  item: Project,
+  index: number
+}
 
-const ProjectCard = (props: Project) => {
+const ProjectCard : React.FC<IProjectCardProps> = ({item, index}: IProjectCardProps) => {
+  const MotionImage = motion(Image, { forwardMotionProps: true});
+
   return (
     <div 
-      className='flex flex-col items-center mx-3 lg:mx-5 my-5 lg:my-5 w-auto lg:w-1/2 h-auto'
+      className='flex flex-col flex-grow items-center sm:mx-3 lg:mx-5 my-5 lg:my-5 w-auto lg:w-1/2 h-auto'
     >
-      {props.liveURL !== "/" &&
-        <Link href={props.liveURL}>
-          <Image src={props.image} 
-                 alt='project-screenshot'
-                 height={300} 
+      {item.liveURL === '/' &&
+        <MotionImage src={item.image} 
+                     alt='project-screenshot' 
+                     height={300} 
+                     className='rounded-2xl'
+                     whileInView={{ opacity: [0,1], y: [200, 0] }}
+                     transition={{ type: "tween", duration: (1 + (0.2 * index)), ease: "easeOut" }}
+                     viewport={{ once: true }}
+        />
+      }
+      {item.liveURL !== "/" &&
+        <Link href={item.liveURL}>
+          <MotionImage src={item.image} 
+                       alt='project-screenshot'
+                       height={300} 
+                       whileInView={{ opacity: [0,1], y: [200, 0] }}
+                       transition={{ type: "tween", duration: 1, ease: "easeOut" }}
+                       viewport={{ once: true }}
                  className='rounded-2xl hover:opacity-90'
           />
         </Link>
-      }
-      {props.liveURL === '/' &&
-        <Image src={props.image} 
-               alt='project-screenshot' 
-               height={300} 
-               className='rounded-2xl'
-        />
       }
       <div className='h-auto w-full flex flex-col mx-5'>
         <motion.h1 
@@ -39,10 +51,10 @@ const ProjectCard = (props: Project) => {
           viewport={{ once: true }}
           className='text-center my-3 w-full'
         >
-          {props.name}
+          {item.name}
         </motion.h1>
         <div className='flex flex-wrap justify-center w-auto mx-8'>
-          {props.technologies.map((item, i) => 
+          {item.technologies.map((item, i) => 
             <TechnologyItem item={item} index={i} key={i}/>  
           )}
         </div>
@@ -52,59 +64,59 @@ const ProjectCard = (props: Project) => {
           viewport={{ once: true }}
           className='my-4'
         >
-          <p>{props.description}</p>
+          <p>{item.description}</p>
         </motion.div>
         <div className='flex justify-center'>
-          {props.demoLink === '/' && 
+          {item.demoLink === '/' && 
             <motion.button 
               whileInView={{ opacity: [0,1], y: [200, 0] }}
               transition={{ type: "tween", duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className=' bg-notion-text-default text-white mx-2 px-1 md:px-4 py-1 lg:my-5 flex rounded-full flex-row items-center'
+              className=' bg-notion-text-default text-white px-1 md:px-4 py-1 mx-1 lg:mx-2 lg:my-5 flex rounded-full flex-row items-center'
             >
-              <MdError className='mr-2'/>
+              <MdError className='mr-1 sm:mr-2'/>
               Demo Not Available
             </motion.button>
           }
-          {props.demoLink !== '/' &&
+          {item.demoLink !== '/' &&
             <motion.button 
               whileInView={{ opacity: [0,1], y: [200, 0] }}
               transition={{ type: "tween", duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
               className='text-white mx-1'
               onClick={() => {
-                window.open(props.demoLink);
+                window.open(item.demoLink);
               }}
             >
               <div className=' bg-black rounded-full px-4 py-1 mx-2 md:px-4 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'>
-                <AiOutlineEye className='mr-2'/>
+                <AiOutlineEye className='mr-1 sm:mr-2'/>
                 Demo
               </div>
             </motion.button>
           }
-          {props.codeLink === '/' && 
+          {item.codeLink === '/' && 
             <motion.button 
               whileInView={{ opacity: [0,1], y: [200, 0] }}
               transition={{ type: "tween", duration: 1.25, ease: "easeOut" }}
               viewport={{ once: true }}
-              className=' bg-notion-text-default text-white mx-1 px-2 md:px-4 py-1 lg:my-5 flex rounded-full flex-row items-center'
+              className=' bg-notion-text-default text-white px-1 md:px-4 py-1 mx-1 lg:mx-2 lg:my-5 flex rounded-full flex-row items-center'
             >
-              <MdError className='mr-2'/>
+              <MdError className='mr-1 sm:mr-2'/>
               Code Not Public 
             </motion.button>
           }
-          {props.codeLink !== '/' && 
+          {item.codeLink !== '/' && 
             <motion.button 
               whileInView={{ opacity: [0,1], y: [200, 0] }}
               transition={{ type: "tween", duration: 1.25, ease: "easeOut" }}
               viewport={{ once: true }}
               className=' text-white mx-1'
               onClick={() => {
-                window.open(props.codeLink);
+                window.open(item.codeLink);
               }}
             >
               <div className=' bg-black rounded-full px-2 md:px-4 py-1 lg:my-5 flex flex-row items-center transition-all hover:-translate-y-1'>
-                <FiCode className='mr-2'/>
+                <FiCode className='mr-1 sm:mr-2'/>
                 Code
               </div>
             </motion.button>

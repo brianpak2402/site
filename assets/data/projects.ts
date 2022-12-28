@@ -11,9 +11,9 @@ const projectList : Project[] = [
                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         technologies: [
             techMap.get("Serverless Stack Toolkit") as Technology,
-            techMap.get("React") as Technology,
             techMap.get("Chakra UI") as Technology,
             techMap.get("Spotify API") as Technology,
+            techMap.get("React") as Technology,
         ],
         image: jukeboxScreenshot,
         liveURL: "/",
