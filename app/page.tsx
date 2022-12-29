@@ -69,129 +69,131 @@ export default function Home() {
           <BiDownArrowAlt className='h-14 w-14'/>
         </motion.button>
       </section>
-      <section id="about" ref={aboutSection} className='bg-slate-300 h-auto lg:h-screen/2 w-screen flex flex-col sm:flex-row self-center justify-between'>
-        <div className='m-5 items-start w-screen sm:w-1/4 px-5'>
-          <ul className='roboto-mono'>
-            <motion.li 
-              className='py-2 flex flex-row border-b border-b-black/60'
-              whileInView={{ opacity: [0, 1], x: [-200, 0] }}
-              transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+      <section id="about" ref={aboutSection} className='bg-slate-300 h-auto lg:h-screen/2 w-screen'>
+        <div className='h-full flex flex-col sm:flex-row justify-between align-middle my-2 xl:my-16'>
+          <div className='my-2 sm:ml-5 px-5 w-screen sm:w-1/4'>
+            <ul className='roboto-mono'>
+              <motion.li 
+                className='py-2 flex flex-row border-b border-b-black/60'
+                whileInView={{ opacity: [0, 1], x: [-200, 0] }}
+                transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <p> <strong className='text-black'>NAME : </strong> Brian Pak</p>
+              </motion.li>
+              <motion.li 
+                className='py-2 flex flex-row border-b border-b-black/60'
+                whileInView={{ opacity: [0,1], x: [-200, 0] }}
+                transition={{ type:"tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <p> <strong className='text-black'>PRONOUNS: </strong> He/him</p>
+              </motion.li>
+              <motion.li 
+                className='py-2 flex flex-row border-b border-b-black/60'
+                whileInView={{ opacity: [0, 1], x: [-200, 0] }}
+                transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <p> <strong className='text-black'>SCHOOL : </strong> Georgia Institute of Technology</p>
+              </motion.li>
+              <motion.li 
+                className='py-2 flex flex-row border-b border-b-black/60'
+                whileInView={{ opacity: [0, 1], x: [-200, 0] }}
+                transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <p> <strong className='text-black'>AGE : </strong> 20 Years </p>
+              </motion.li>
+              <motion.li 
+                className='py-2 flex flex-row border-b border-b-black/60'
+                whileInView={{ opacity: [0, 1], x: [-200, 0] }}
+                transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <p> <strong className='text-black'>HOMETOWN: </strong> Duluth, GA </p>
+              </motion.li>
+            </ul>
+            <div className='flex flex-row justify-evenly self-center lg:pt-4'>
+              <motion.button 
+                className='w-10 h-10 hover:rounded-full'
+                whileInView={{ opacity: [0, 1], x: [-100, 0]}}
+                transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <Link href='https://gatech.joinhandshake.com/stu/users/37132762' className='flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
+                  <SiHandshake className='h-full w-2/3'/>
+                </Link>
+              </motion.button>
+              <motion.button 
+                className='w-10 h-10 hover:rounded-full'
+                whileInView={{ opacity: [0, 1], x: [-100, 0]}}
+                transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <Link 
+                  href='https://www.linkedin.com/in/brianpakk/' 
+                  className='flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'
+                >  
+                  <FaLinkedinIn className='h-full w-2/3'/>
+                </Link>
+              </motion.button>
+              <motion.button 
+                className='w-10 h-10 hover:rounded-full'
+                whileInView={{ opacity: [0, 1], x: [-100, 0]}}
+                transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <Link href='https://github.com/brianpak2402' className='flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
+                  <FaGithub  className='h-full w-2/3'/>
+                </Link>
+              </motion.button>
+            </div>
+          </div>
+          <div className='text-center sm:text-left sm:mr-8 px-3 w-screen sm:w-3/4'>
+            <motion.p 
+              className='my-2'
+              whileInView={{ opacity:[0,1], y: [200,0]}}
+              transition={{ type: "tween", duration:0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <p> <strong className='text-black'>NAME : </strong> Brian Pak</p>
-            </motion.li>
-            <motion.li 
-              className='py-2 flex flex-row border-b border-b-black/60'
-              whileInView={{ opacity: [0,1], x: [-200, 0] }}
-              transition={{ type:"tween", duration: 0.5, ease: "easeOut" }}
+              I am an undergraduate student pursuing a degree in computer science at the Georgia Institute of Technology <strong>🐝</strong>, and I love developing 
+              APIs and full-stack applications that support all kinds of user experiences. 
+            </motion.p>
+            <motion.p 
+              className='my-2'
+              whileInView={{ opacity:[0,1], y: [200,0]}}
+              transition={{ type: "tween", duration:0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <p> <strong className='text-black'>PRONOUNS: </strong> He/him</p>
-            </motion.li>
-            <motion.li 
-              className='py-2 flex flex-row border-b border-b-black/60'
-              whileInView={{ opacity: [0, 1], x: [-200, 0] }}
-              transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+              Two years ago, I transitioned from studying cello performance to computer science, and I have since built many web applications using technologies like 
+              React <strong>⚛</strong>, Spring Boot, Next.js, Tailwind CSS, and Express. I've also gained strong programming experience with Java, JavaScript, and C through
+              courses like Objects & Design (CS 2340) and Computer Programming & Organization (CS 2110).
+            </motion.p>
+            <motion.p 
+              className='my-2'
+              whileInView={{ opacity:[0,1], y: [200,0]}}
+              transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <p> <strong className='text-black'>SCHOOL : </strong> Georgia Institute of Technology</p>
-            </motion.li>
-            <motion.li 
-              className='py-2 flex flex-row border-b border-b-black/60'
-              whileInView={{ opacity: [0, 1], x: [-200, 0] }}
-              transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <p> <strong className='text-black'>AGE : </strong> 20 Years </p>
-            </motion.li>
-            <motion.li 
-              className='py-2 flex flex-row border-b border-b-black/60'
-              whileInView={{ opacity: [0, 1], x: [-200, 0] }}
-              transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <p> <strong className='text-black'>HOMETOWN: </strong> Duluth, GA </p>
-            </motion.li>
-          </ul>
-          <div className='flex flex-row justify-evenly self-center lg:pt-4'>
+              Right now, I am learning about Next.js 13 (beta), Tailwind CSS, Express, and GraphQL so that I can build more powerful APIs and 
+              user-interfaces that take advantage of server-side rendering. I am also seeking a Software Engineering internship that will allow me 
+              to gain practical experience in full-stack and API development during this coming summer.
+            </motion.p>
             <motion.button 
-              className='w-10 h-10 hover:rounded-full'
-              whileInView={{ opacity: [0, 1], x: [-100, 0]}}
-              transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+              className=' text-white'
+              whileInView={{ opacity:[0, 0.7, 1], y: [200, 10, 0] }}
+              transition={{ type: "tween", duration:1.2, ease: "easeOut", times: [0, 0.9, 1] }}
               viewport={{ once: true }}
+              onClick={() => {
+                window.open("/Pak_Brian_Resume.pdf");
+              }}
             >
-              <Link href='https://gatech.joinhandshake.com/stu/users/37132762' className='flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
-                <SiHandshake className='h-full w-2/3'/>
-              </Link>
-            </motion.button>
-            <motion.button 
-              className='w-10 h-10 hover:rounded-full'
-              whileInView={{ opacity: [0, 1], x: [-100, 0]}}
-              transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <Link 
-                href='https://www.linkedin.com/in/brianpakk/' 
-                className='flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'
-              >  
-                <FaLinkedinIn className='h-full w-2/3'/>
-              </Link>
-            </motion.button>
-            <motion.button 
-              className='w-10 h-10 hover:rounded-full'
-              whileInView={{ opacity: [0, 1], x: [-100, 0]}}
-              transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <Link href='https://github.com/brianpak2402' className='flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
-                <FaGithub  className='h-full w-2/3'/>
-              </Link>
+              <div className='bg-notion-legacy-red rounded-full px-4 py-2 my-2 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
+                Download My Resume
+              </div>
             </motion.button>
           </div>
-        </div>
-        <div className='text-center sm:text-left sm:mr-8 px-3 pt-2 pb-4 sm:py-6 w-screen sm:w-3/4'>
-          <motion.p 
-            className='my-2'
-            whileInView={{ opacity:[0,1], y: [200,0]}}
-            transition={{ type: "tween", duration:0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            I am an undergraduate student pursuing a degree in computer science at the Georgia Institute of Technology <strong>🐝</strong>, and I love developing 
-            APIs and full-stack applications that support all kinds of user experiences. 
-          </motion.p>
-          <motion.p 
-            className='my-2'
-            whileInView={{ opacity:[0,1], y: [200,0]}}
-            transition={{ type: "tween", duration:0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            Two years ago, I transitioned from studying cello performance to computer science, and I have since built many web applications using technologies like 
-            React <strong>⚛</strong>, Spring Boot, Next.js, Tailwind CSS, and Express. I've also gained strong programming experience with Java, JavaScript, and C through
-            courses like Objects & Design (CS 2340) and Computer Programming & Organization (CS 2110).
-          </motion.p>
-          <motion.p 
-            className='my-2'
-            whileInView={{ opacity:[0,1], y: [200,0]}}
-            transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            Right now, I am learning about Next.js 13 (beta), Tailwind CSS, Express, and GraphQL so that I can build more powerful APIs and 
-            user-interfaces that take advantage of server-side rendering. I am also seeking a Software Engineering internship that will allow me 
-            to gain practical experience in full-stack and API development during this coming summer.
-          </motion.p>
-          <motion.button 
-            className=' text-white'
-            whileInView={{ opacity:[0, 0.7, 1], y: [200, 10, 0] }}
-            transition={{ type: "tween", duration:1.2, ease: "easeOut", times: [0, 0.9, 1] }}
-            viewport={{ once: true }}
-            onClick={() => {
-              window.open("/Pak_Brian_Resume.pdf");
-            }}
-          >
-            <div className='bg-notion-legacy-red rounded-full px-4 py-2 my-2 flex justify-center duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
-              Download My Resume
-            </div>
-          </motion.button>
         </div>
       </section>
       <section className='bg-white h-auto lg:h-screen/2 flex flex-col items-center'>
@@ -275,6 +277,9 @@ export default function Home() {
             <ProjectCard item={project} index={i} key={i} />
           )}
         </div>
+      </section>
+      <section className='flex flex-col'>
+
       </section>
     </main>
   )
