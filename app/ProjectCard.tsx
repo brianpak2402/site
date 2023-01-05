@@ -34,14 +34,16 @@ const ProjectCard : React.FC<IProjectCardProps> = ({item, index}: IProjectCardPr
       }
       {item.liveURL !== "/" &&
         <Link href={item.liveURL}>
-          <MotionImage src={item.image} 
-                       alt='project-screenshot'
-                       height={300} 
-                       whileInView={{ opacity: [0,1], y: [200, 0] }}
-                       transition={{ type: "tween", duration: 1, ease: "easeOut" }}
-                       viewport={{ once: true }}
-                 className='rounded-2xl hover:opacity-90'
-          />
+          <div className='transition-all hover:opacity-80'>
+            <MotionImage src={item.image} 
+                        alt='project-screenshot'
+                        height={300} 
+                        whileInView={{ opacity: [0,1], y: [200, 0] }}
+                        transition={{ type: "tween", duration: 1, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                  className='rounded-2xl hover:opacity-90'
+            />
+          </div>
         </Link>
       }
       <div className='h-auto w-full flex flex-col mx-5'>
@@ -62,9 +64,10 @@ const ProjectCard : React.FC<IProjectCardProps> = ({item, index}: IProjectCardPr
           whileInView={{ opacity: [0,1], y: [200, 0] }}
           transition={{ type: "tween", duration: 1.05, ease: "easeOut" }}
           viewport={{ once: true }}
-          className='my-4'
+          className='mt-5 mb-1'
         >
-          <p>{item.description}</p>
+          <p className='mb-3'>{item.description_p1}</p> 
+          <p>{item.description_p2}</p>
         </motion.div>
         <div className='flex justify-center'>
           {item.demoLink === '/' && 

@@ -7,7 +7,8 @@ export type Technology = {
 
 export type Project = {
     name: string;
-    description: string;
+    description_p1: string;
+    description_p2: string;
     technologies: Technology[];
     image: StaticImageData;
     liveURL: string;
