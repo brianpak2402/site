@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 
 import AxiosLogo from '../assets/images/logos/axios-logo.png';
@@ -12,7 +11,6 @@ import TailwindLogo from '../assets/images/logos/tailwind-logo.png';
 import SpotifyAPILogo from '../assets/images/logos/spotify-api-logo.png';
 import TypeScriptLogo from '../assets/images/logos/typescript-logo.png';
 import ChakraUILogo from '../assets/images/logos/chakra-ui-logo.png';
-import FramerMotionLogo from '../assets/images/logos/framer-motion-logo.png';
 
 const images:StaticImageData[] = [
   TailwindLogo,
@@ -25,7 +23,6 @@ const images:StaticImageData[] = [
   ReactLogo,
   JavaScriptLogo,
   TypeScriptLogo,
-  FramerMotionLogo,
 ]
 
 const imagesToRender:StaticImageData[] = images.concat(images).concat(images).concat(images);

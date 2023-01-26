@@ -42,10 +42,6 @@ const technologies : Technology[] = [
         color: "purple",
     },
     {
-        name: "Framer Motion",
-        color: "pink",
-    },
-    {
         name: "SQL",
         color: "pink",
     },
