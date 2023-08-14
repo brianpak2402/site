@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "./imageCard.module.css";
 import Link from "next/link";
 
@@ -6,7 +6,7 @@ interface Props {
   title: string;
   subtitle?: string;
   description: string;
-  imgSrc: string;
+  imgSrc: string | StaticImageData;
   imgAlt?: string;
   href: string;
 }
@@ -15,7 +15,7 @@ export default function ImageCard({ title, subtitle, description, imgSrc, imgAlt
   return (
     <div className={styles.card}>
       <Link href={href} className={styles.image}>
-        <Image src={imgSrc} alt={imgAlt || ""} />
+        <Image src={imgSrc} alt={imgAlt || ""} layout="" />
       </Link>
       <div className={styles.content}>
         <h1>{title}</h1>

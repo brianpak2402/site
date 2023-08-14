@@ -4,6 +4,8 @@ import ImageCard from "./ImageCard";
 import styles from "./page.module.css";
 
 import RidgelineLogo from "../../public/RidglineLogo.svg";
+import JukeboxScreenshot from "../../public/jukebox-screenshot.png";
+import BuzzConnectScreenshot from "../../public/buzzconnect-screenshot.png";
 
 export default function Home() {
   return (
@@ -25,6 +27,27 @@ export default function Home() {
           description="hello"
           imgSrc={RidgelineLogo}
           href="https://www.ridgelineapps.com/"
+        />
+        <ImageCard
+          title="Robotic Musicianship Lab"
+          subtitle="Student Software Developer"
+          description="hello"
+          imgSrc={RidgelineLogo}
+          href="https://www.ridgelineapps.com/"
+        />
+        <ImageCard
+          title="Spotify Jukebox"
+          subtitle="Co-founder"
+          description="Did something"
+          imgSrc={JukeboxScreenshot}
+          href="/"
+        />
+        <ImageCard
+          title="BuzzConnect"
+          subtitle="Contributor"
+          description="Did something"
+          imgSrc={BuzzConnectScreenshot}
+          href="/"
         />
       </main>
     </div>
