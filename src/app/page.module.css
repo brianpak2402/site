@@ -1,0 +1,102 @@
+.main {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.header {
+  font-size: 14px;
+  padding: 0px 14px 0px 14px;
+}
+
+.outer_menu {
+  height: 45rem;
+}
+
+.items_container {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* LOGO STYLES */
+.logo_container {
+  padding: 1rem 0rem 0.25rem 0rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 20px 30px 0;
+}
+
+/* LINKS MENU */
+.menu {
+  display: block;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul :nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.menu ul :nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.menu ul :nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.item {
+  padding: 0rem 0rem 0.3rem 0rem;
+  font-weight: 600;
+}
+
+.item a {
+  transition:
+    opacity 500ms ease,
+    top 500ms ease;
+  color: #cccccc;
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  padding: 0;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.item a:hover {
+  opacity: 0.5;
+}
+
+.fade_up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 0.75s ease 0.1s forwards;
+}
+
+@keyframes fadeUpAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LOGO MENU */
+.socials {
+  margin: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
