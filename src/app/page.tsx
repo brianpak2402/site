@@ -4,6 +4,7 @@ import ImageCard from "./ImageCard";
 import styles from "./page.module.css";
 
 import { Experiences } from "../data";
+import { useId } from "react";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
             description={item.description}
             imgSrc={item.image}
             href={item.url}
+            key={useId()}
           />
         ))}
       </main>
