@@ -1,6 +1,6 @@
 import { ExperienceItem } from "./typings";
 
-import RidgelinePhoto from "@public/photos/ridgeline-apps.png";
+import RidgelinePhoto from "@public/photos/ridgeline-apps.jpeg"
 import ShimiPhoto from "@public/photos/robotic-musicianship.jpg";
 import SpotboxPhoto from "@public/photos/jukebox-screenshot.png";
 import BuzzConnectPhoto from "@public/photos/buzzconnect-screenshot.png";
