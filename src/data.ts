@@ -35,7 +35,7 @@ export const Experiences: ExperienceItem[] = [
   },
   {
     organization: "Georgia Tech",
-    position: "Contributor",
+    position: "Contributor - BuzzConnect",
     description:
       "Designed & implemented over 15 APIs using Spring Boot and MySQL to post about upcoming on-campus events.",
     image: BuzzConnectPhoto,

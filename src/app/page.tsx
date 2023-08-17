@@ -1,7 +1,8 @@
-import Header from "./Header";
-import Title from "./Title";
-import ImageCard from "./ImageCard";
+import Header from "@components/shared/Header/Header";
 import styles from "./page.module.css";
+
+import Title from "@components/Title/Title";
+import ImageCard from "@components/ImageCard/ImageCard";
 
 import { Experiences } from "../data";
 import { useId } from "react";

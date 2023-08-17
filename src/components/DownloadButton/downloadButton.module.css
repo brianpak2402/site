@@ -1,0 +1,19 @@
+.button {
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 15px;
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+}
+
+.purple_shadow {
+  --tw-shadow: 0 0 45px 0px rgba(195, 0, 240, 0.3);
+  --tw-shadow-colored: 0 0 45px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
+}
+
+.button_text {
+  white-space: nowrap;
+  font-size: 1rem;
+}

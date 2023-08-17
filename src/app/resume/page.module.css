@@ -1,0 +1,68 @@
+.page {
+  max-width: inherit;
+  max-height: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 0;
+  padding: 2rem 4rem 2rem 4rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 0 4rem 0 4rem;
+}
+
+/* HEADING STYLES */
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 0.25rem;
+}
+
+/* RESUME SECTION STYLES */
+.resume_section {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: 3rem 0 0 0;
+  gap: 3rem;
+}
+
+.resume_section h3 {
+  font-weight: 800;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.resume_items {
+  margin: 0 0 4rem 0;
+}
+
+.resume_items > div:not(:first-child) {
+  margin: 1.5rem 0 0 0;
+}
+
+/* FOOTING STYLES */
+.footing {
+  width: 100%;
+  display: flex;
+  margin: 1rem 0 1rem 0;
+  padding: 1rem 0 1rem 0;
+  align-items: center;
+  justify-content: center;
+}

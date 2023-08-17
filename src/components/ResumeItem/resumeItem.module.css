@@ -1,0 +1,48 @@
+.resume_item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+/* RESUME ITEM HEADING STYLES */
+.item_heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.item_heading_left {
+  text-align: left;
+}
+
+.item_heading_right {
+  text-align: right;
+}
+
+.item_title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* RESUME ITEM CONTENT STYLES */
+.resume_item_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content_list {
+  list-style-type: disc;
+  margin: 0 0 0 1.25rem;
+}
+
+.content_text {
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  font-size: 1.15rem;
+}

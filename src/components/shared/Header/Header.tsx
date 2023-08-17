@@ -1,18 +1,25 @@
 import Link from "next/link";
 import styles from "./header.module.css";
-import IconButton from "./IconButton";
+
+import IconButton from "@components/IconButton/IconButton";
 
 import InstagramSVG from "@public/icons/instagram.svg";
 import LinkedinSVG from "@public/icons/linkedin.svg";
 import GithubSVG from "@public/icons/github.svg";
+import GradientTitle from "@components/GradientTitle/GradientTitle";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.outer_menu}>
         <section className={styles.logo_container}>
-          <Link href="/">
-            <h1 className={`${styles.logo} ${styles.purple_pink_gradient}`}>BRIAN PAK</h1>
+          <Link href="/" className={styles.logo}>
+            <GradientTitle
+              content="BRIAN PAK"
+              fontSize="2.25rem"
+              gradientFrom="#a855f7"
+              gradientTo="#f472b6"
+            />
           </Link>
         </section>
         <section className={styles.items_container}>
