@@ -1,11 +1,14 @@
 import GradientTitle from "@components/GradientTitle/GradientTitle";
-import styles from "./page.module.css";
 import ResumeItem from "@components/ResumeItem/ResumeItem";
 import DownloadButton from "@components/DownloadButton/DownloadButton";
+import Header from "@components/shared/Header/Header";
+
+import styles from "./page.module.css";
 
 export default function Resume() {
   return (
-    <main className={styles.page}>
+    <main className={styles.main}>
+      <Header orientation="HORIZONTAL" />
       <div className={styles.content}>
         <section className={styles.heading}>
           <div>
@@ -25,19 +28,21 @@ export default function Resume() {
         </section>
         <section className={styles.resume_section}>
           <h3>Education</h3>
-          <ResumeItem
-            title="Georgia Tech"
-            gradient={{
-              gradientFrom: "#b3a369",
-              gradientTo: "#fbbf24",
-            }}
-            icon="🐝"
-            role="B.S. Computer Science"
-            dates="Aug 2020 - May 2024"
-            location="Atlanta, GA"
-            content={["Threads: Intelligence & Media"]}
-            isList={false}
-          />
+          <div className={styles.resume_items}>
+            <ResumeItem
+              title="Georgia Tech"
+              gradient={{
+                gradientFrom: "#b3a369",
+                gradientTo: "#fbbf24",
+              }}
+              icon="🐝"
+              role="B.S. Computer Science"
+              dates="Aug 2020 - May 2024"
+              location="Atlanta, GA"
+              content={["Threads: Intelligence & Media"]}
+              isList={false}
+            />
+          </div>
         </section>
         <section className={styles.resume_section}>
           <h3>Experience</h3>
@@ -62,7 +67,7 @@ export default function Resume() {
             <ResumeItem
               title="GT Robotic Musicianship Lab"
               gradient={{
-                gradientFrom: "#fb923c",
+                gradientFrom: "#fbbf24",
                 gradientTo: "#60a5fa",
               }}
               icon="🎵"

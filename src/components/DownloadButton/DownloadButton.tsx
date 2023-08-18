@@ -1,5 +1,6 @@
 "use client";
 
+import { CSSProperties } from "react";
 import styles from "./downloadButton.module.css";
 
 interface Props {
@@ -9,11 +10,13 @@ interface Props {
 
 export default function DownloadButton({ content, file }: Props) {
   return (
-    <button
-      onClick={() => window.open(file)}
-      className={`${styles.button} ${styles.purple_shadow}`}
-    >
-      <h6 className={styles.button_text}>{content}</h6>
-    </button>
+    <div className={`${styles.outer_button} ${styles.purple_shadow} ${styles.purple_gradient} `}>
+      <button
+        onClick={() => window.open(file)}
+        className={`${styles.button} ${styles.transition_colors}`}
+      >
+        <h6>{content}</h6>
+      </button>
+    </div>
   );
 }

@@ -1,13 +1,13 @@
-.page {
+.main {
   max-width: inherit;
   max-height: inherit;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 0 0 0;
-  padding: 2rem 4rem 2rem 4rem;
+  padding: 0rem 4rem 2rem 4rem;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -15,7 +15,7 @@
 .content {
   width: 100%;
   height: 100%;
-  padding: 0 4rem 0 4rem;
+  padding: 4rem 4rem 0 4rem;
 }
 
 /* HEADING STYLES */
@@ -39,7 +39,6 @@
   flex-direction: row;
   box-sizing: border-box;
   margin: 3rem 0 0 0;
-  gap: 3rem;
 }
 
 .resume_section h3 {
@@ -47,10 +46,12 @@
   margin-bottom: 0;
   font-size: 1.5rem;
   line-height: 2rem;
+  width: 25%;
 }
 
 .resume_items {
   margin: 0 0 4rem 0;
+  width: 100%;
 }
 
 .resume_items > div:not(:first-child) {

@@ -10,7 +10,7 @@ import { useId } from "react";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Header />
+      <Header orientation="VERTICAL" />
       <main className={styles.main}>
         <Title
           content="👋🏻 I'm Brian, an aspiring software engineer experienced in enterprise FinTech, Music Technology, and Cello Performance."

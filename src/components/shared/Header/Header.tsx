@@ -8,56 +8,83 @@ import LinkedinSVG from "@public/icons/linkedin.svg";
 import GithubSVG from "@public/icons/github.svg";
 import GradientTitle from "@components/GradientTitle/GradientTitle";
 
-export default function Header() {
+type OrientationOption = "VERTICAL" | "HORIZONTAL";
+
+interface Props {
+  orientation: OrientationOption;
+}
+
+export default function Header({ orientation }: Props) {
   return (
-    <header className={styles.header}>
-      <div className={styles.outer_menu}>
-        <section className={styles.logo_container}>
-          <Link href="/" className={styles.logo}>
-            <GradientTitle
-              content="BRIAN PAK"
-              fontSize="2.25rem"
-              gradientFrom="#a855f7"
-              gradientTo="#f472b6"
-            />
-          </Link>
-        </section>
-        <section className={styles.items_container}>
-          <nav className={styles.menu}>
-            <ul>
-              <li className={`${styles.item} ${styles.fade_up}`}>
-                <Link href="/work">Work</Link>
-              </li>
-              <li className={`${styles.item} ${styles.fade_up}`}>
-                <Link href="/about">About</Link>
-              </li>
-              <li className={`${styles.item} ${styles.fade_up}`}>
-                <Link href="/resume">Resume</Link>
-              </li>
-            </ul>
-          </nav>
-          <nav className={styles.socials}>
-            <IconButton
-              href="https://gatech.joinhandshake.com/stu/users/37132762"
-              src={InstagramSVG}
-              alt="Instagram"
-              width={30}
-            />
-            <IconButton
-              href="https://www.linkedin.com/in/brianpakk/"
-              src={LinkedinSVG}
-              alt="LinkedIn"
-              width={30}
-            />
-            <IconButton
-              href="https://github.com/brianpak2402"
-              src={GithubSVG}
-              alt="Github"
-              width={30}
-            />
-          </nav>
-        </section>
-      </div>
-    </header>
+    <>
+      {orientation === "VERTICAL" ? (
+        <header className={styles.vertical_header}>
+          <div className={styles.outer_menu}>
+            <section className={styles.logo_container}>
+              <Link href="/" className={styles.logo}>
+                <GradientTitle
+                  content="BRIAN PAK"
+                  fontSize="2.25rem"
+                  gradientFrom="#a855f7"
+                  gradientTo="#f472b6"
+                />
+              </Link>
+            </section>
+            <section className={styles.items_container}>
+              <nav className={styles.menu}>
+                <ul>
+                  <li className={`${styles.item} ${styles.fade_up}`}>
+                    <Link href="/work">Work</Link>
+                  </li>
+                  <li className={`${styles.item} ${styles.fade_up}`}>
+                    <Link href="/about">About</Link>
+                  </li>
+                  <li className={`${styles.item} ${styles.fade_up}`}>
+                    <Link href="/resume">Resume</Link>
+                  </li>
+                </ul>
+              </nav>
+              <nav className={styles.socials}>
+                <IconButton
+                  href="https://gatech.joinhandshake.com/stu/users/37132762"
+                  src={InstagramSVG}
+                  alt="Instagram"
+                  width={30}
+                />
+                <IconButton
+                  href="https://www.linkedin.com/in/brianpakk/"
+                  src={LinkedinSVG}
+                  alt="LinkedIn"
+                  width={30}
+                />
+                <IconButton
+                  href="https://github.com/brianpak2402"
+                  src={GithubSVG}
+                  alt="Github"
+                  width={30}
+                />
+              </nav>
+            </section>
+          </div>
+        </header>
+      ) : (
+        <header className={`${styles.horizontal_header} ${styles.backdrop_blur}`}>
+          <div className={styles.horizontal_header_content}>
+            <Link href="/" className={styles.item}>
+              Home
+            </Link>
+            <Link href="/work" className={styles.item}>
+              Work
+            </Link>
+            <Link href="/about" className={styles.item}>
+              About
+            </Link>
+            <Link href="/resume" className={styles.item}>
+              Resume
+            </Link>
+          </div>
+        </header>
+      )}
+    </>
   );
 }

@@ -1,19 +1,49 @@
 .button {
-  padding: 1rem 2rem 1rem 2rem;
-  border-radius: 15px;
-  border: transparent;
-  background: transparent;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
   cursor: pointer;
+  flex: 1 1 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.purple_gradient {
+  --tw-gradient-to: #d946ef;
+  --tw-gradient-from: #7c3aed;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .purple_shadow {
-  --tw-shadow: 0 0 45px 0px rgba(195, 0, 240, 0.3);
+  --tw-shadow: 0 0 45px 10px rgba(195, 0, 240, 0.3);
   --tw-shadow-colored: 0 0 45px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow);
 }
 
-.button_text {
+.outer_button {
+  padding: 2px;
+  border-radius: 7px;
+  border: none;
+}
+
+.transition_colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+.button:hover {
+  color: black;
+  background-color: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.button > h6 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   white-space: nowrap;
-  font-size: 1rem;
 }
