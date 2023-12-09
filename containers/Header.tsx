@@ -17,7 +17,10 @@ export default function Header() {
       <nav className="hidden lg:block">
         <ul className="mt-16 w-max">
           <li>
-            <a className="group flex items-center py-3 active" href="#about">
+            <a
+              className="group flex items-center py-3 active"
+              href="#about"
+            >
               <span className="mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-focus-visible:w-16 group-focus-visible:bg-gray-200 motion-reduce:transition-none" />
               <span className="nav-text text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-gray-200 group-focus-visible:text-gray-200">
                 About
@@ -25,7 +28,10 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a className="group flex items-center py-3 " href="#experience">
+            <a
+              className="group flex items-center py-3 "
+              href="#experience"
+            >
               <span className="mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-focus-visible:w-16 group-focus-visible:bg-gray-200 motion-reduce:transition-none" />
               <span className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-gray-200 group-focus-visible:text-gray-200">
                 Experience
@@ -33,7 +39,10 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a className="group flex items-center py-3 " href="#projects">
+            <a
+              className="group flex items-center py-3 "
+              href="#projects"
+            >
               <span className="mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-focus-visible:w-16 group-focus-visible:bg-gray-200 motion-reduce:transition-none" />
               <span className="text-xs font-bold uppercase tracking-widest text-gray-500 group-hover:text-gray-200 group-focus-visible:text-gray-200">
                 Projects
@@ -42,10 +51,13 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <ul aria-label="social-media" className="ml-1 mt-8 flex items-center">
+      <ul
+        aria-label="social-media"
+        className="ml-1 mt-8 flex items-center"
+      >
         <li className="mr-5 text-xs">
           <a
-            className="block transition-all hover:text-slate-200"
+            className="block transition-all hover:text-stone-400"
             href="https://github.com/brianpak2402"
           >
             <FaGithub className="h-6 w-6" />
@@ -53,8 +65,8 @@ export default function Header() {
         </li>
         <li className="mr-5 text-xs">
           <a
-            className="block transition-all hover:text-gray-200"
-            href="https://github.com/brianpak2402"
+            className="block transition-all hover:text-stone-400"
+            href="https://linkedin.com/in/brianpakk"
           >
             <FaLinkedin className="h-6 w-6" />
           </a>

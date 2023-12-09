@@ -1,6 +1,7 @@
 "use client";
 
 import ExperienceCard from "@components/custom/ExpereinceCard";
+import ProjectCard from "@components/custom/ProjectCard";
 
 export default function Home() {
   return (
@@ -88,15 +89,15 @@ export default function Home() {
           <div className="mt-12">
             <a
               className="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
-              href="/"
+              href="Pak_Brian_Resume.pdf"
             >
               <span>
                 <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">
-                  View Full &nbsp;
+                  View Full
                 </span>
                 <span className="whitespace-nowrap">
                   <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">
-                    Résumé
+                    &#160; Résumé
                   </span>
                   <svg
                     aria-hidden="true"
@@ -115,6 +116,23 @@ export default function Home() {
               </span>
             </a>
           </div>
+        </div>
+      </section>
+      <section
+        className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+        id="projects"
+      >
+        <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-transparent px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+            Projects
+          </h2>
+        </div>
+        <div>
+          <ul>
+            <li className="mb-12">
+              <ProjectCard />
+            </li>
+          </ul>
         </div>
       </section>
     </main>
