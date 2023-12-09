@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "clear": "rm -rf node-modules package-lock.json",
     "start": "next start",
     "lint": "next lint"
   },
