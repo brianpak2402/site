@@ -56,7 +56,7 @@ export default function Home() {
               <ExperienceCard
                 dates="Jun 2023 - Aug 2023"
                 description="Designed and launched a high-throughput notification system for trade alerts, enabling traders to receive real-time audio feedback on pre-specified transactions."
-                hoverColor="teal-300"
+                hoverColor="teal"
                 role="Software Engineer Intern"
                 technologies={[
                   "React",
@@ -75,7 +75,7 @@ export default function Home() {
               <ExperienceCard
                 dates="Jan 2023 - Current"
                 description="Spearheading the revival of the web client for the lab's famed AI-based DJ app: Mixboard. Providing improvements to a global network of beta testers through knowledge shares and collaboration across multiple teams."
-                hoverColor="yellow-600"
+                hoverColor="yellow"
                 role="Student Software Developer"
                 technologies={[
                   "React",

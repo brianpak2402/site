@@ -1,3 +1,4 @@
+import type { AnimatedLinkColorVariant } from "./AnimatedLink";
 import AnimatedLink from "./AnimatedLink";
 import Tag from "./Tag";
 
@@ -12,7 +13,7 @@ export default function ExperienceCard({
 }: {
   dates: string;
   description: string;
-  hoverColor?: string;
+  hoverColor?: AnimatedLinkColorVariant;
   role: string;
   technologies: string[];
   title: string;
