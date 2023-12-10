@@ -10,8 +10,9 @@ export default function Header() {
         <h2 className="mt-3 text-lg font-medium tracking-tight text-gray-200 sm:text-xl">
           Software Engineer
         </h2>
-        <p className="mt-4 max-w-xs leading-normal">
-          I build cool stuff for enterprise Fintech and Music Technology.
+        <p className="mt-4 max-w-xs leading-normal xl:text-lg">
+          I build cool stuff for enterprise Fintech and Music Technology on the
+          cloud.
         </p>
       </div>
       <nav className="hidden lg:block">
