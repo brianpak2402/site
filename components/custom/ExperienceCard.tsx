@@ -7,7 +7,7 @@ export default function ExperienceCard({
   dates,
   description,
   technologies,
-  hoverColor = "purple-600",
+  hoverColor = undefined,
   url,
 }: {
   dates: string;

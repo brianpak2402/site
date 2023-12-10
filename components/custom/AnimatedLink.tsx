@@ -12,11 +12,14 @@ export default function AnimatedLink({
   const modifiedText = text.split(" ");
   const lastWord = modifiedText.pop();
 
+  const colorStyles = `hover:text-${hoverColor} focus-visible:text-${hoverColor}`;
+  const borderStyles = `group-hover:border-${hoverColor}`;
+
   return (
     <>
       {variant === "up" && (
         <a
-          className={`inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-${hoverColor} focus-visible:text-${hoverColor} group/link text-base`}
+          className={`inline-flex items-baseline font-medium leading-tight text-slate-200 ${colorStyles} group/link text-base`}
           href={href}
         >
           <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
@@ -42,17 +45,17 @@ export default function AnimatedLink({
       {variant === "right" && (
         <a
           className="inline-flex items-center leading-tight font-semibold text-slate-200 group"
-          href="Pak_Brian_Resume.pdf"
+          href={href}
         >
           <span>
             <span
-              className={`border-b border-transparent pb-px transition group-hover:border-${hoverColor} motion-reduce:transition-none`}
+              className={`border-b border-transparent pb-px transition ${borderStyles} motion-reduce:transition-none`}
             >
               {modifiedText.join(" ")}
             </span>
             <span className="whitespace-nowrap">
               <span
-                className={`border-b border-transparent pb-px transition group-hover:border-${hoverColor} motion-reduce:transition-none`}
+                className={`border-b border-transparent pb-px transition ${borderStyles} motion-reduce:transition-none`}
               >
                 &#160;{lastWord}
               </span>

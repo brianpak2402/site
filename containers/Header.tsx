@@ -19,7 +19,7 @@ export default function Header() {
         <ul className="mt-16 w-max">
           <li>
             <a
-              className="group flex items-center py-3 active"
+              className="group flex items-center py-3"
               href="#about"
             >
               <span className="mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-focus-visible:w-16 group-focus-visible:bg-gray-200 motion-reduce:transition-none" />
@@ -58,7 +58,7 @@ export default function Header() {
       >
         <li className="mr-5 text-xs">
           <a
-            className="block transition-all hover:text-stone-400"
+            className="block transition-all hover:text-violet-500"
             href="https://github.com/brianpak2402"
           >
             <FaGithub className="h-6 w-6" />
@@ -66,7 +66,7 @@ export default function Header() {
         </li>
         <li className="mr-5 text-xs">
           <a
-            className="block transition-all hover:text-stone-400"
+            className="block transition-all hover:text-violet-500"
             href="https://linkedin.com/in/brianpakk"
           >
             <FaLinkedin className="h-6 w-6" />
