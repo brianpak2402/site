@@ -1,10 +1,27 @@
+export type AnimatedLinkColorVariant = keyof typeof COLOR_VARIANTS;
+
+const COLOR_VARIANTS = {
+  purple: {
+    border: "group-hover:border-purple-400",
+    text: "hover:text-purple-400 focus-visible:text-purple-400",
+  },
+  teal: {
+    border: "group-hover:border-teal-300",
+    text: "hover:text-teal-300 focus-visible:text-teal-300",
+  },
+  yellow: {
+    border: "group-hover:border-yellow-500",
+    text: "hover:text-yellow-500 focus-visible:text-yellow-500",
+  },
+};
+
 export default function AnimatedLink({
   text,
   variant,
   href,
-  hoverColor = "purple-400",
+  hoverColor = "purple",
 }: {
-  hoverColor?: string;
+  hoverColor?: AnimatedLinkColorVariant;
   href: string;
   text: string;
   variant: "up" | "right";
@@ -12,14 +29,13 @@ export default function AnimatedLink({
   const modifiedText = text.split(" ");
   const lastWord = modifiedText.pop();
 
-  const colorStyles = `hover:text-${hoverColor} focus-visible:text-${hoverColor}`;
-  const borderStyles = `group-hover:border-${hoverColor}`;
+  const borderStyles = COLOR_VARIANTS[hoverColor].border;
 
   return (
     <>
       {variant === "up" && (
         <a
-          className={`inline-flex items-baseline font-medium leading-tight text-slate-200 ${colorStyles} group/link text-base`}
+          className={`inline-flex items-baseline font-medium leading-tight text-slate-200 ${COLOR_VARIANTS[hoverColor].text} group/link text-base`}
           href={href}
         >
           <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
