@@ -18,9 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      className="dark"
+      lang="en"
+    >
       <body
-        className={`bg-black leading-relaxed text-white antialiased selection:bg-stone-800 selection:text-white ${inter.className} `}
+        className={`bg-black leading-relaxed text-white antialiased selection:bg-violet-800 selection:text-white ${inter.className} `}
       >
         <HoverBubble />
         <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
