@@ -2,15 +2,14 @@
 
 import { useEffect, useState } from "react";
 
-export default function HoverBubble() {
+export default function Spotlight() {
   const [clientX, setClientX] = useState(0);
   const [clientY, setClientY] = useState(0);
 
   useEffect(() => {
     const resetCoordinates = (event: MouseEvent) => {
-      event.preventDefault();
-      setClientX(event.clientX);
-      setClientY(event.clientY);
+      setClientX(event.pageX);
+      setClientY(event.pageY);
     };
 
     document.addEventListener("mousemove", resetCoordinates);
@@ -21,7 +20,7 @@ export default function HoverBubble() {
     <div
       className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
       style={{
-        background: `radial-gradient(600px at ${clientX}px ${clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+        background: `radial-gradient(600px at ${clientX}px ${clientY}px, rgba(101, 29, 216, 0.15), transparent 80%)`,
       }}
     />
   );

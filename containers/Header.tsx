@@ -58,7 +58,7 @@ export default function Header() {
       >
         <li className="mr-5 text-xs">
           <a
-            className="block transition-all hover:text-violet-500"
+            className="block transition-all hover:text-purple-400"
             href="https://github.com/brianpak2402"
           >
             <FaGithub className="h-6 w-6" />
@@ -66,7 +66,7 @@ export default function Header() {
         </li>
         <li className="mr-5 text-xs">
           <a
-            className="block transition-all hover:text-violet-500"
+            className="block transition-all hover:text-purple-400"
             href="https://linkedin.com/in/brianpakk"
           >
             <FaLinkedin className="h-6 w-6" />
