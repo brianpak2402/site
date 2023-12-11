@@ -23,10 +23,9 @@ export default function Home() {
             to a career in software development when I decided to pursue a
             degree in computer science in late 2021. I often found myself in
             rabbit holes at the time trying to figure out how metronome apps
-            worked, and I wanted to try my hand in replicating these apps. My
-            attempts were not successful, but I've since had the wonderful
-            opportunity to expand on this passion at both my school and in the
-            industry.
+            worked, and I wanted to try my hand in replicating these apps. I've
+            since had the wonderful opportunity to expand on this passion at
+            both my school and in the industry.
           </p>
           <p className="mb-4 lg:text-lg">
             My main commitments these days revolve around leading music
