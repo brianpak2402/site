@@ -58,6 +58,12 @@ export default function Home() {
               dates="Jan 2023 - Current"
               description="Spearheading the revival of the web client for the lab's famed AI-based DJ app: Mixboard. Providing improvements to a global network of beta testers through knowledge shares and collaboration across multiple teams."
               hoverColor="yellow"
+              relatedLinks={[
+                {
+                  href: "https://research.gatech.edu/new-app-uses-ai-enable-anyone-make-musical-mashups",
+                  name: "Mixboard Article",
+                },
+              ]}
               role="Student Software Developer"
               technologies={[
                 "React",
@@ -65,6 +71,7 @@ export default function Home() {
                 "Web Audio API",
                 "Firebase",
                 "Python",
+                "Flask",
               ]}
               title="Georgia Tech Center for Music Technology"
               url="https://gtcmt.gatech.edu/"
@@ -84,12 +91,13 @@ export default function Home() {
           <li className="mb-12">
             <ProjectCard
               description="Web app that separates audio tracks into chords, bass, vocals, and drum parts for users to mix together on a drag-and-drop interface. Create mashups and share them with your friends!"
-              href="https://research.gatech.edu/new-app-uses-ai-enable-anyone-make-musical-mashups"
+              href="http://130.207.85.80/"
               imageSrc={MixboardImage}
               technologies={[
                 "React",
                 "Typescript",
                 "HTML Drag & Drop API",
+                "Chakra UI",
                 "Flask",
                 "Python",
               ]}
