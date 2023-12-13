@@ -1,6 +1,6 @@
-export type AnimatedLinkColorVariant = keyof typeof COLOR_VARIANTS;
+export type AnimatedLinkColorVariant = keyof typeof AnimatedLinkColors;
 
-const COLOR_VARIANTS = {
+export const AnimatedLinkColors = {
   purple: {
     border: "group-hover:border-purple-400",
     text: "hover:text-purple-400 focus-visible:text-purple-400",
@@ -29,13 +29,11 @@ export default function AnimatedLink({
   const modifiedText = text.split(" ");
   const lastWord = modifiedText.pop();
 
-  const borderStyles = COLOR_VARIANTS[hoverColor].border;
-
   return (
     <>
       {variant === "up" && (
         <a
-          className={`inline-flex items-baseline font-medium leading-tight text-slate-200 ${COLOR_VARIANTS[hoverColor].text} group/link text-base`}
+          className={`inline-flex items-baseline font-medium leading-tight text-slate-200 ${AnimatedLinkColors[hoverColor].text} group/link text-base`}
           href={href}
         >
           <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
@@ -65,13 +63,13 @@ export default function AnimatedLink({
         >
           <span>
             <span
-              className={`border-b border-transparent pb-px transition ${borderStyles} motion-reduce:transition-none`}
+              className={`border-b border-transparent pb-px transition ${AnimatedLinkColors[hoverColor].border} motion-reduce:transition-none`}
             >
               {modifiedText.join(" ")}
             </span>
             <span className="whitespace-nowrap">
               <span
-                className={`border-b border-transparent pb-px transition ${borderStyles} motion-reduce:transition-none`}
+                className={`border-b border-transparent pb-px transition ${AnimatedLinkColors[hoverColor].border} motion-reduce:transition-none`}
               >
                 &#160;{lastWord}
               </span>
