@@ -37,7 +37,7 @@ export default function Home() {
           <li className="mb-12">
             <ExperienceCard
               dates="Jun 2023 - Aug 2023"
-              description="Designed and launched a high-throughput notification system for trade alerts, enabling traders to receive real-time audio feedback on preset financial transactions."
+              description="Designed and launched a high-throughput notification service for trade alerts, enabling traders to receive preset audio feedback on real-time financial transactions."
               hoverColor="teal"
               role="Software Engineer Intern"
               technologies={[
