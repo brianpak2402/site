@@ -8,7 +8,7 @@ export default function Header() {
           <a href="/">Brian Pak</a>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-gray-200 sm:text-xl">
-          Aspiring Software Engineer
+          Incoming Software Engineer
         </h2>
         <p className="mt-4 max-w-xs leading-normal xl:text-lg">
           I build cool stuff for enterprise Fintech and Music Technology on the
