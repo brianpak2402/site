@@ -50,7 +50,7 @@ export default function ExperienceCard({
               className="mr-4"
             >
               <a
-                className="relative mt-2 inline-flex items-center text-sm font-medium transition-all text-black hover:text-purple-500 focus-visible:text-purple-500"
+                className="relative mt-2 inline-flex items-center text-sm font-medium transition-all text-slate-600 hover:text-purple-500 focus-visible:text-purple-500"
                 href={relatedLink.href}
               >
                 <svg
