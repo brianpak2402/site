@@ -1,11 +1,11 @@
+/* eslint-disable new-cap */
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import ShaderBackground from "@components/ui/ShaderBackground";
 import Header from "@containers/Header";
 import "./globals.css";
 
-// eslint-disable-next-line new-cap
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   description: "Brian Pak's Personal Portfolio Website",
@@ -23,7 +23,7 @@ export default function RootLayout({
       lang="en"
     >
       <body className="bg-black leading-relaxed text-white antialiased selection:bg-violet-800 selection:text-white">
-        <div className={`${inter.className} relative`}>
+        <div className={`${lora.className} relative`}>
           <ShaderBackground />
           <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
             <div className="lg:flex lg:justify-between lg:gap-4">

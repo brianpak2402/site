@@ -32,10 +32,10 @@ export default function Home() {
       </Section>
       <Section title="Experience">
         <ol>
-          <li className="mb-12">
+          <li className="mb-5">
             <ExperienceCard
               dates="Incoming"
-              description="TBD"
+              description="I'm joining Ridgeline as a full-time software engineer beginning July 2024!"
               hoverColor="teal"
               role="Software Engineer I"
               technologies={[]}
@@ -43,7 +43,7 @@ export default function Home() {
               url="https://www.ridgelineapps.com"
             />
           </li>
-          <li className="mb-12">
+          <li className="mb-5">
             <ExperienceCard
               dates="Jun 2023 - Aug 2023"
               description="Designed and launched a high-throughput notification service for trade alerts, enabling traders to receive preset audio feedback on real-time financial transactions."
@@ -62,7 +62,7 @@ export default function Home() {
               url="https://www.ridgelineapps.com"
             />
           </li>
-          <li className="mb-12">
+          <li className="mb-5">
             <ExperienceCard
               dates="Jan 2023 - Current"
               description="Spearheading the revival of the web client for the lab's famed AI-based DJ app: Mixboard. Providing improvements to a global network of beta testers through knowledge shares and collaboration across multiple teams."
@@ -89,15 +89,15 @@ export default function Home() {
         </ol>
         <div className="mt-12">
           <AnimatedLink
+            arrowDirection="right"
             href="Pak_Brian_Resume.pdf"
             text="View Full Résumé"
-            variant="right"
           />
         </div>
       </Section>
       <Section title="Projects">
         <ul>
-          <li className="mb-12">
+          <li className="mb-5">
             <ProjectCard
               description="Web app that separates audio tracks into chords, bass, vocals, and drum parts for users to mix together on a drag-and-drop interface. Create mashups and share them with your friends!"
               href="http://130.207.85.80/"
@@ -113,7 +113,7 @@ export default function Home() {
               title="Mixboard"
             />
           </li>
-          <li className="mb-12">
+          <li className="mb-5">
             <ProjectCard
               description="Web app for hosting virtual jukebox sessions on the cloud. Hosts can connect their Spotify account and share a PIN that allows others to upvote, downvote, and add songs to a public song queue at social events."
               href="https://www.rocola.it"

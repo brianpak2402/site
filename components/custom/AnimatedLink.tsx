@@ -17,14 +17,14 @@ export const AnimatedLinkColors = {
 
 export default function AnimatedLink({
   text,
-  variant,
+  arrowDirection: variant,
   href,
   hoverColor = "purple",
 }: {
+  arrowDirection: "up" | "right";
   hoverColor?: AnimatedLinkColorVariant;
   href: string;
   text: string;
-  variant: "up" | "right";
 }) {
   const modifiedText = text.split(" ");
   const lastWord = modifiedText.pop();
@@ -33,7 +33,7 @@ export default function AnimatedLink({
     <>
       {variant === "up" && (
         <a
-          className={`inline-flex items-baseline font-medium leading-tight text-slate-200 ${AnimatedLinkColors[hoverColor].text} group/link text-base`}
+          className={`inline-flex items-baseline font-medium leading-tight text-purple-500 ${AnimatedLinkColors[hoverColor].text} group/link text-base`}
           href={href}
         >
           <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
