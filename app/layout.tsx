@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Spotlight from "@components/custom/Spotlight";
 import Header from "@containers/Header";
 import "./globals.css";
 
