@@ -1,8 +1,6 @@
 "use client";
 
-import AnimatedLink from "@components/custom/AnimatedLink";
-import ExperienceCard from "@components/custom/ExperienceCard";
-import ProjectCard from "@components/custom/ProjectCard";
+import { AnimatedLink, ExperienceCard, ProjectCard } from "@components/custom";
 import Section from "@containers/Section";
 import MixboardImage from "@public/Mixboard_screenshot.png";
 import RocolaImage from "@public/Rocola_screenshot.png";
@@ -28,12 +26,23 @@ export default function Home() {
         </p>
         <p className="mb-4 lg:text-lg">
           When I'm not at the computer, you'll find me learning new recipes in
-          the kitchen, shopping at thrift stores, or coffee hopping with
-          friends.
+          the kitchen, cafe-hopping with friends, or exploring the area around
+          me.
         </p>
       </Section>
       <Section title="Experience">
         <ol>
+          <li className="mb-12">
+            <ExperienceCard
+              dates="Incoming"
+              description="TBD"
+              hoverColor="teal"
+              role="Software Engineer I"
+              technologies={[]}
+              title="Ridgline Apps"
+              url="https://www.ridgelineapps.com"
+            />
+          </li>
           <li className="mb-12">
             <ExperienceCard
               dates="Jun 2023 - Aug 2023"
