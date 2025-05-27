@@ -10,35 +10,32 @@ export default function Home() {
     <main className="pt-24 lg:w-1/2 lg:py-24">
       <Section title="About">
         <p className="mb-4 lg:text-lg">
-          Coming from 7 years of studying cello performance, I began my path to
-          a career in software development when I decided to pursue a degree in
-          computer science in late 2021. I often found myself in rabbit holes at
-          the time trying to figure out how metronome apps worked, and I wanted
-          to try my hand in replicating these apps. I've since had the wonderful
-          opportunity to expand on this passion at both my school and in the
-          industry.
+          After seven years studying cello performance, I began my journey into
+          software development in late 2021. I was often drawn into rabbit holes
+          trying to understand how metronome apps worked, which sparked my
+          interest in building them myself. Since then, I have been fortunate to
+          grow this passion through both academic and industry experiences.
         </p>
         <p className="mb-4 lg:text-lg">
-          My main commitments these days revolve around leading music technology
-          projects at the Georgia Institute of Technology. I'm also exploring
-          machine learning in preparation of adding AI-driven features to my own
-          personal projects.
-        </p>
-        <p className="mb-4 lg:text-lg">
-          When I'm not at the computer, you'll find me learning new recipes in
-          the kitchen, cafe-hopping with friends, or exploring the area around
-          me.
+          You'll find me experimenting with new latte art, sitting in at live
+          jazz clubs , or shopping around the area for something new to wear.
         </p>
       </Section>
       <Section title="Experience">
         <ol>
           <li className="mb-5">
             <ExperienceCard
-              dates="Incoming"
-              description="I'm joining Ridgeline as a full-time software engineer beginning July 2024!"
+              dates="July 2024 - Current"
+              description="Driving new product enhancements & relieving tech debt for the Portfolio Accounting - Core team."
               hoverColor="teal"
-              role="Software Engineer I"
-              technologies={[]}
+              role="Software Engineer"
+              technologies={[
+                "React",
+                "Spring Boot",
+                "Typescript",
+                "Kotlin",
+                "PostgreSQL",
+              ]}
               title="Ridgline Apps"
               url="https://www.ridgelineapps.com"
             />
@@ -56,7 +53,6 @@ export default function Home() {
                 "AWS Lambda",
                 "Amazon S3",
                 "Amazon RDS",
-                "AWS SNS",
               ]}
               title="Ridgline Apps"
               url="https://www.ridgelineapps.com"
@@ -64,8 +60,8 @@ export default function Home() {
           </li>
           <li className="mb-5">
             <ExperienceCard
-              dates="Jan 2023 - Current"
-              description="Spearheading the revival of the web client for the lab's famed AI-based DJ app: Mixboard. Providing improvements to a global network of beta testers through knowledge shares and collaboration across multiple teams."
+              dates="Jan 2023 - May 2024"
+              description="Revived the web client for Georgia Tech Center for Music Technology's famed AI-based DJ app: Mixboard. Delivered product enhancements to a global network of 200 beta testers through knowledge shares and collaboration across multiple teams."
               hoverColor="yellow"
               relatedLinks={[
                 {
@@ -81,6 +77,7 @@ export default function Home() {
                 "Firebase",
                 "Python",
                 "Flask",
+                "Redis",
               ]}
               title="Georgia Tech Center for Music Technology"
               url="https://gtcmt.gatech.edu/"
@@ -104,7 +101,6 @@ export default function Home() {
               imageSrc={MixboardImage}
               technologies={[
                 "React",
-                "Typescript",
                 "HTML Drag & Drop API",
                 "Chakra UI",
                 "Flask",
@@ -115,7 +111,7 @@ export default function Home() {
           </li>
           <li className="mb-5">
             <ProjectCard
-              description="Web app for hosting virtual jukebox sessions on the cloud. Hosts can connect their Spotify account and share a PIN that allows others to upvote, downvote, and add songs to a public song queue at social events."
+              description="Website for hosting virtual jukebox sessions on the cloud. Hosts can connect their Spotify account and share a PIN that allows others to upvote, downvote, and add songs to a public song queue at social events."
               href="https://www.rocola.it"
               imageSrc={RocolaImage}
               technologies={[
